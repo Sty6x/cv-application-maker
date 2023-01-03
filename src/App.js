@@ -22,6 +22,8 @@ class App extends React.Component {
 				jobLocation: "",
 				jobDescription: "",
 			},
+			educKey: 0,
+			educID: 0,
 			education: [],
 			userEducationInput: {
 				schoolName: "",
@@ -37,6 +39,7 @@ class App extends React.Component {
 		this.removeExperience = this.removeExperience.bind(this);
 		this.handleEducationInput = this.handleEducationInput.bind(this);
 		this.addEducation = this.addEducation.bind(this);
+		this.removeEducation = this.removeEducation.bind(this);
 	}
 
 	handleSkillInput(e) {
@@ -149,9 +152,7 @@ class App extends React.Component {
 	addExperience() {
 		this.setState(
 			{
-				experience: this.state.experience.concat(
-					this.state.userExperienceInput
-				),
+				experience: this.state.experience.concat(this.state.userExperienceInput),
 			},
 			() => console.log(this.state)
 		);
@@ -172,14 +173,18 @@ class App extends React.Component {
 		//sorry i dont know whats going on here
 		this.setState({});
 	}
+	removeEducation(e) {
+		const educationIndex = e.target.parentNode.id;
+		const sliced = this.state.education.splice(educationIndex, 1);
+		// i had to mutate the array to be able to delete a specific element
+		//sorry i dont know whats going on here
+		this.setState({});
+	}
 	render() {
 		return (
 			<div id="app-container">
 				<div id="skill">
-					<SkillInput
-						handleSkillInput={this.handleSkillInput}
-						addSkill={this.addSkill}
-					/>
+					<SkillInput handleSkillInput={this.handleSkillInput} addSkill={this.addSkill} />
 					<SkillList skillsArr={this.state.skills} />
 				</div>
 				<div id="experience">
@@ -195,8 +200,16 @@ class App extends React.Component {
 					/>
 				</div>
 				<div id="education">
-					<EducationInput addEducationHandler={this.addEducation}inputHandler={this.handleEducationInput} />
-					<EducationList educationList={this.state.education}/>
+					<EducationInput
+						addEducationHandler={this.addEducation}
+						inputHandler={this.handleEducationInput}
+					/>
+					<EducationList
+						removeEducHandler={this.removeEducation}
+						educID={this.state.educID}
+						educKey={this.state.educKey}
+						educationList={this.state.education}
+					/>
 				</div>
 			</div>
 		);
