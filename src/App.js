@@ -13,7 +13,7 @@ class App extends React.Component {
 			userExperienceInput: {
 				jobTitle: "",
 				startDate: "",
-				endData: "",
+				endDate: "",
 				jobLocation: "",
 				jobDescription: "",
 			},
@@ -75,7 +75,7 @@ class App extends React.Component {
 			);
 		}
 
-	if (e.target.id === "location-job-input") {
+		if (e.target.id === "location-job-input") {
 			this.setState(
 				{
 					userExperienceInput: {
@@ -87,7 +87,7 @@ class App extends React.Component {
 			);
 		}
 
-    if (e.target.id === "start-date-job-input") {
+		if (e.target.id === "start-date-job-input") {
 			this.setState(
 				{
 					userExperienceInput: {
@@ -98,8 +98,8 @@ class App extends React.Component {
 				() => console.log(this.state)
 			);
 		}
-    
-    if (e.target.id === "end-date-job-input") {
+
+		if (e.target.id === "end-date-job-input") {
 			this.setState(
 				{
 					userExperienceInput: {
@@ -111,10 +111,9 @@ class App extends React.Component {
 			);
 		}
 	}
-
 	render() {
 		return (
-			<div id="app-container">
+			<div>
 				<input
 					onChange={this.handleSkillInput}
 					className="border-[2px] border-solid border-zinc-700"
@@ -124,7 +123,6 @@ class App extends React.Component {
 					Add Skill
 				</button>
 				<SkillList skillsArr={this.state.skills} />
-
 				<div>
 					<ExperienceInput inputHandler={this.handleExperienceInput} />
 				</div>

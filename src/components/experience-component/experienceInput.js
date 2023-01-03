@@ -21,11 +21,11 @@ class ExperienceInput extends React.Component {
 				</div>
 				<div id="job-startdate-input-container">
 					<label htmlFor="start-date-job-input">Start:</label>
-					<input name="start-date-job-input" id="start-date-job-input" />
+					<input onChange={inputHandler} name="start-date-job-input" id="start-date-job-input" />
 				</div>
 				<div id="job-enddate-input-container">
 					<label htmlFor="end-date-job-input">End:</label>
-					<input name="end-date-job-input" id="end-date-job-input" />
+					<input onChange={inputHandler} name="end-date-job-input" id="end-date-job-input" />
 				</div>
 				
                 <button type="button">Add Experience</button>
