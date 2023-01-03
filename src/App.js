@@ -141,7 +141,7 @@ class App extends React.Component {
 					/>
 				</div>
 				<div>
-					<ExperienceList />
+					<ExperienceList experienceList={this.state.experience}/>
 				</div>
 			</div>
 		);
