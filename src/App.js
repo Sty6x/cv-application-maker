@@ -129,8 +129,9 @@ class App extends React.Component {
 	removeExperience(e) {
 		const experienceIndex = e.target.parentNode.id;
 		const sliced = this.state.experience.splice(experienceIndex, 1);
-		//sorry
-	 this.setState({})	
+		// i had to mutate the array to be able to delete a specific element
+		//sorry i dont know whats going on here
+		this.setState({});
 	}
 	render() {
 		return (
