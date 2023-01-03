@@ -10,7 +10,7 @@ class SkillList extends React.Component{
            return  <Skill skill={skill} />
         })
         return(
-            <ul className="flex flex-col"  id="skill-list">
+            <ul className="flex flex-col bg-slate-500"  id="skill-list">
                 {displaySkills}
             </ul>
         )
