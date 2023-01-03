@@ -74,6 +74,42 @@ class App extends React.Component {
 				() => console.log(this.state)
 			);
 		}
+
+	if (e.target.id === "location-job-input") {
+			this.setState(
+				{
+					userExperienceInput: {
+						...this.state.userExperienceInput,
+						jobLocation: e.target.value,
+					},
+				},
+				() => console.log(this.state)
+			);
+		}
+
+    if (e.target.id === "start-date-job-input") {
+			this.setState(
+				{
+					userExperienceInput: {
+						...this.state.userExperienceInput,
+						startDate: e.target.value,
+					},
+				},
+				() => console.log(this.state)
+			);
+		}
+    
+    if (e.target.id === "end-date-job-input") {
+			this.setState(
+				{
+					userExperienceInput: {
+						...this.state.userExperienceInput,
+						endDate: e.target.value,
+					},
+				},
+				() => console.log(this.state)
+			);
+		}
 	}
 
 	render() {

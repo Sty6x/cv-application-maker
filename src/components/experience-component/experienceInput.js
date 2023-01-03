@@ -12,7 +12,7 @@ class ExperienceInput extends React.Component {
 					<input onChange={inputHandler} name="job-input" id="title-job-input" />
 				</div>
                 <div id="job-location-input-container">
-					<label htmlFor="location-job-input">Description:</label>
+					<label htmlFor="location-job-input">Location:</label>
 					<input onChange={inputHandler} name="location-job-input" id="location-job-input" />
 				</div>
                 <div id="job-desc-input-container">
