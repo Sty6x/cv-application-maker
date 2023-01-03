@@ -22,6 +22,13 @@ class App extends React.Component {
 				jobLocation: "",
 				jobDescription: "",
 			},
+			education:[],
+			userEducationInput: {
+				schoolName: "",
+				graduationYear: "",
+				schoolLocation: "",
+				schoolDescription: "",
+			},
 		};
 		this.handleSkillInput = this.handleSkillInput.bind(this);
 		this.addSkill = this.addSkill.bind(this);
@@ -83,6 +90,46 @@ class App extends React.Component {
 		}
 	}
 
+
+
+	handleEducationInput(e) {
+		if (e.target.id === "school-name-input") {
+			this.setState({
+				userEducationInput: {
+					...this.state.userEducationInput,
+					schoolName: e.target.value,
+				},
+			});
+		}
+
+		if (e.target.id === "school-location-input") {
+			this.setState({
+			userEducationInput:{
+				...this.state.userEducationInput,
+				schoolLocation:e.target.value,
+			}
+			});
+		}
+
+		if (e.target.id === "school-grad-date-input") {
+			this.setState({
+				userExperienceInput: {
+					...this.state.userExperienceInput,
+					jobLocation: e.target.value,
+				},
+			});
+		}
+
+		if (e.target.id === "school-desc-input") {
+			this.setState({
+				userExperienceInput: {
+					...this.state.userExperienceInput,
+					startDate: e.target.value,
+				},
+			});
+		}
+
+	}
 	// need to remove value for each input filed that is added
 	addSkill() {
 		if (this.state.input === "") {
@@ -141,8 +188,8 @@ class App extends React.Component {
 					/>
 				</div>
 				<div id="education">
-					<EducationInput/>
-					<EducationList/>
+					<EducationInput />
+					<EducationList />
 				</div>
 			</div>
 		);
