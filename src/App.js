@@ -1,8 +1,9 @@
 import "./App.css";
 import React from "react";
-import SkillList from "./components/skillList";
+import SkillList from "./components/skill-component/skillList";
 import ExperienceInput from "./components/experience-component/experienceInput";
 import ExperienceList from "./components/experience-component/experienceList";
+import SkillInput from "./components/skill-component/skillInput";
 class App extends React.Component {
 	constructor(props) {
 		super(props);
@@ -120,7 +121,9 @@ class App extends React.Component {
 	addExperience() {
 		this.setState(
 			{
-				experience: this.state.experience.concat(this.state.userExperienceInput),
+				experience: this.state.experience.concat(
+					this.state.userExperienceInput
+				),
 			},
 			() => console.log(this.state)
 		);
@@ -137,14 +140,10 @@ class App extends React.Component {
 		return (
 			<div>
 				{this.state.experience.length}
-				<input
-					onChange={this.handleSkillInput}
-					className="border-[2px] border-solid border-zinc-700"
-					type="text"
+				<SkillInput
+					handleSkillInput={this.handleSkillInput}
+					addSkill={this.addSkill}
 				/>
-				<button onClick={this.addSkill} type="button">
-					Add Skill
-				</button>
 				<SkillList skillsArr={this.state.skills} />
 				<div>
 					<ExperienceInput
