@@ -29,63 +29,55 @@ class App extends React.Component {
 	}
 
 	handleSkillInput(e) {
-		this.setState(
-			{
-				input: e.target.value,
-			});
+		this.setState({
+			input: e.target.value,
+		});
 	}
 
 	handleExperienceInput(e) {
 		if (e.target.id === "title-job-input") {
-			this.setState(
-				{
-					userExperienceInput: {
-						...this.state.userExperienceInput,
-						jobTitle: e.target.value,
-					},
-				});
+			this.setState({
+				userExperienceInput: {
+					...this.state.userExperienceInput,
+					jobTitle: e.target.value,
+				},
+			});
 		}
 
 		if (e.target.id === "desc-job-input") {
-			this.setState(
-				{
-					userExperienceInput: {
-						...this.state.userExperienceInput,
-						jobDescription: e.target.value,
-					},
-				});
+			this.setState({
+				userExperienceInput: {
+					...this.state.userExperienceInput,
+					jobDescription: e.target.value,
+				},
+			});
 		}
 
 		if (e.target.id === "location-job-input") {
-			this.setState(
-				{
-					userExperienceInput: {
-						...this.state.userExperienceInput,
-						jobLocation: e.target.value,
-					},
-				});
+			this.setState({
+				userExperienceInput: {
+					...this.state.userExperienceInput,
+					jobLocation: e.target.value,
+				},
+			});
 		}
 
 		if (e.target.id === "start-date-job-input") {
-			this.setState(
-				{
-					userExperienceInput: {
-						...this.state.userExperienceInput,
-						startDate: e.target.value,
-					},
-				}
-			);
+			this.setState({
+				userExperienceInput: {
+					...this.state.userExperienceInput,
+					startDate: e.target.value,
+				},
+			});
 		}
 
 		if (e.target.id === "end-date-job-input") {
-			this.setState(
-				{
-					userExperienceInput: {
-						...this.state.userExperienceInput,
-						endDate: e.target.value,
-					},
-				}
-			);
+			this.setState({
+				userExperienceInput: {
+					...this.state.userExperienceInput,
+					endDate: e.target.value,
+				},
+			});
 		}
 	}
 
@@ -126,20 +118,19 @@ class App extends React.Component {
 	}
 	render() {
 		return (
-			<div>
-				{this.state.experience.length}
-				<SkillInput
-					handleSkillInput={this.handleSkillInput}
-					addSkill={this.addSkill}
-				/>
-				<SkillList skillsArr={this.state.skills} />
-				<div>
+			<div id="app-container">
+				<div id="skill">
+					<SkillInput
+						handleSkillInput={this.handleSkillInput}
+						addSkill={this.addSkill}
+					/>
+					<SkillList skillsArr={this.state.skills} />
+				</div>
+				<div id="experience">
 					<ExperienceInput
 						addExperienceHandler={this.addExperience}
 						inputHandler={this.handleExperienceInput}
 					/>
-				</div>
-				<div>
 					<ExperienceList
 						removeExpHandler={this.removeExperience}
 						expID={this.state.expID}
