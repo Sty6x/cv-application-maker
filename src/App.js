@@ -4,6 +4,8 @@ import SkillList from "./components/skill-component/skillList";
 import ExperienceInput from "./components/experience-component/experienceInput";
 import ExperienceList from "./components/experience-component/experienceList";
 import SkillInput from "./components/skill-component/skillInput";
+import EducationInput from "./components/education-component/educationInput";
+import EducationList from "./components/education-component/educationList";
 class App extends React.Component {
 	constructor(props) {
 		super(props);
@@ -137,6 +139,10 @@ class App extends React.Component {
 						expKey={this.state.expKey}
 						experienceList={this.state.experience}
 					/>
+				</div>
+				<div id="education">
+					<EducationInput/>
+					<EducationList/>
 				</div>
 			</div>
 		);

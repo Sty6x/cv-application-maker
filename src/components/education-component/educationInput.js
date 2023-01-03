@@ -5,6 +5,8 @@ class EducationInput extends React.Component {
 		super(props);
 	}
 	render() {
+        const inputHandler = this.props.inputHandler;
+        const addExpHandler = this.props.addExperienceHandler;
 		return (
 			<div id="education-input-field">
 				<div id="education-input-container">
