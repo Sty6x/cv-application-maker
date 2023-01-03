@@ -9,12 +9,21 @@ class App extends React.Component {
 		this.state = {
 			skills: [],
 			input: "",
+			experience: [],
+			userExperienceInput: {
+				jobTitle: "",
+				startDate: "",
+				endData: "",
+				jobLocation: "",
+				jobDescription: "",
+			},
 		};
-		this.handleInput = this.handleInput.bind(this);
+		this.handleSkillInput = this.handleSkillInput.bind(this);
 		this.addSkill = this.addSkill.bind(this);
+		this.handleExperienceInput = this.handleExperienceInput.bind(this);
 	}
 
-	handleInput(e) {
+	handleSkillInput(e) {
 		this.setState(
 			{
 				input: e.target.value,
@@ -41,11 +50,37 @@ class App extends React.Component {
 		}
 	}
 
+	handleExperienceInput(e) {
+		if (e.target.id === "title-job-input") {
+			this.setState(
+				{
+					userExperienceInput: {
+						...this.state.userExperienceInput,
+						jobTitle: e.target.value,
+					},
+				},
+				() => console.log(this.state)
+			);
+		}
+
+		if (e.target.id === "desc-job-input") {
+			this.setState(
+				{
+					userExperienceInput: {
+						...this.state.userExperienceInput,
+						jobDescription: e.target.value,
+					},
+				},
+				() => console.log(this.state)
+			);
+		}
+	}
+
 	render() {
 		return (
 			<div id="app-container">
 				<input
-					onChange={this.handleInput}
+					onChange={this.handleSkillInput}
 					className="border-[2px] border-solid border-zinc-700"
 					type="text"
 				/>
@@ -53,13 +88,13 @@ class App extends React.Component {
 					Add Skill
 				</button>
 				<SkillList skillsArr={this.state.skills} />
-      
-				<>
-					<ExperienceInput />
-				</>
-        <>
-        <ExperienceList />
-        </>
+
+				<div>
+					<ExperienceInput inputHandler={this.handleExperienceInput} />
+				</div>
+				<div>
+					<ExperienceList />
+				</div>
 			</div>
 		);
 	}

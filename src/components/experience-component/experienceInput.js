@@ -4,11 +4,20 @@ class ExperienceInput extends React.Component {
 		super(props);
 	}
 	render() {
+        const inputHandler = this.props.inputHandler;
 		return (
 			<div id="experience-input-field">
 				<div id="job-input-container">
 					<label htmlFor="job-input">Job:</label>
-					<input name="job-input" id="job-input" />
+					<input onChange={inputHandler} name="job-input" id="title-job-input" />
+				</div>
+                <div id="job-location-input-container">
+					<label htmlFor="location-job-input">Description:</label>
+					<input onChange={inputHandler} name="location-job-input" id="location-job-input" />
+				</div>
+                <div id="job-desc-input-container">
+					<label htmlFor="desc-job-input">Description:</label>
+					<input onChange={inputHandler} name="desc-job-input" id="desc-job-input" />
 				</div>
 				<div id="job-startdate-input-container">
 					<label htmlFor="start-date-job-input">Start:</label>
@@ -18,10 +27,8 @@ class ExperienceInput extends React.Component {
 					<label htmlFor="end-date-job-input">End:</label>
 					<input name="end-date-job-input" id="end-date-job-input" />
 				</div>
-				<div id="job-desc-input-container">
-					<label htmlFor="desc-job-input">Description:</label>
-					<input name="desc-job-input" id="desc-job-input" />
-				</div>
+				
+                <button type="button">Add Experience</button>
 			</div>
 		);
 	}
