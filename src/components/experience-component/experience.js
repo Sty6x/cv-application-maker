@@ -6,7 +6,7 @@ class Experience extends React.Component{
     render(){
         const {jobTitle,jobDescription,endDate, startDate, jobLocation} = this.props.experience;
         return(
-            <div className="experience-container">
+            <div id={this.props.ID} className="experience-container">
                 <div className="job-location-date">
                     <p>{startDate}, {endDate}</p>
                     <p className="job-location">{jobLocation}</p>
@@ -15,6 +15,7 @@ class Experience extends React.Component{
                     <h3 className="job-title">{jobTitle}</h3>
                     <p className="job-desc">{jobDescription}</p>
                 </div>
+                <button type="button">Remove Experience</button>
             </div>
         )
     }

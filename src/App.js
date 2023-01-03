@@ -9,6 +9,8 @@ class App extends React.Component {
 		this.state = {
 			skills: [],
 			input: "",
+			expKey: 0,
+			expID:0,
 			experience: [],
 			userExperienceInput: {
 				jobTitle: "",
@@ -97,7 +99,7 @@ class App extends React.Component {
 		}
 	}
 
-	// need to remove value for each input filed that is added 
+	// need to remove value for each input filed that is added
 	addSkill() {
 		if (this.state.input === "") {
 			return;
@@ -122,6 +124,15 @@ class App extends React.Component {
 			() => console.log(this.state)
 		);
 	}
+
+	removeExperience() {
+		this.setState(
+			{
+				experience: this.state.experience.slice(this.state.experience.length - 1),
+			},
+			() => console.log(this.state.experience)
+		);
+	}
 	render() {
 		return (
 			<div>
@@ -141,7 +152,7 @@ class App extends React.Component {
 					/>
 				</div>
 				<div>
-					<ExperienceList experienceList={this.state.experience}/>
+					<ExperienceList expID ={this.state.expID} expKey={this.state.expKey} experienceList={this.state.experience} />
 				</div>
 			</div>
 		);
