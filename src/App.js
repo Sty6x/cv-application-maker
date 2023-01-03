@@ -10,7 +10,7 @@ class App extends React.Component {
 			skills: [],
 			input: "",
 			expKey: 0,
-			expID:0,
+			expID: 0,
 			experience: [],
 			userExperienceInput: {
 				jobTitle: "",
@@ -24,6 +24,7 @@ class App extends React.Component {
 		this.addSkill = this.addSkill.bind(this);
 		this.handleExperienceInput = this.handleExperienceInput.bind(this);
 		this.addExperience = this.addExperience.bind(this);
+		this.removeExperience = this.removeExperience.bind(this);
 	}
 
 	handleSkillInput(e) {
@@ -125,17 +126,16 @@ class App extends React.Component {
 		);
 	}
 
-	removeExperience() {
-		this.setState(
-			{
-				experience: this.state.experience.slice(this.state.experience.length - 1),
-			},
-			() => console.log(this.state.experience)
-		);
+	removeExperience(e) {
+		const experienceIndex = e.target.parentNode.id;
+		const sliced = this.state.experience.splice(experienceIndex, 1);
+		//sorry
+	 this.setState({})	
 	}
 	render() {
 		return (
 			<div>
+				{this.state.experience.length}
 				<input
 					onChange={this.handleSkillInput}
 					className="border-[2px] border-solid border-zinc-700"
@@ -152,7 +152,12 @@ class App extends React.Component {
 					/>
 				</div>
 				<div>
-					<ExperienceList expID ={this.state.expID} expKey={this.state.expKey} experienceList={this.state.experience} />
+					<ExperienceList
+						removeExpHandler={this.removeExperience}
+						expID={this.state.expID}
+						expKey={this.state.expKey}
+						experienceList={this.state.experience}
+					/>
 				</div>
 			</div>
 		);
