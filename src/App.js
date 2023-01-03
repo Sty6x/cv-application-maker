@@ -1,6 +1,7 @@
 import "./App.css";
 import React from "react";
 import SkillList from "./components/skillList";
+import ExperienceInput from "./components/experience-component/experienceInput";
 class App extends React.Component {
 	constructor(props) {
 		super(props);
@@ -30,7 +31,7 @@ class App extends React.Component {
 			this.setState(
 				{
 					skills: this.state.skills.concat(this.state.input),
-          input: ''
+					input: "",
 				},
 				() => {
 					console.log(this.state);
@@ -51,6 +52,9 @@ class App extends React.Component {
 					Add Skill
 				</button>
 				<SkillList skillsArr={this.state.skills} />
+				<>
+					<ExperienceInput />
+				</>
 			</div>
 		);
 	}
