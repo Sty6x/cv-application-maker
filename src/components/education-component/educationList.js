@@ -7,10 +7,11 @@ class EducationList extends React.Component {
 
 	render() {
 		const educations = this.props.educationList;
-		let key = this.props.eduKey;
-		let ID = this.props.eduID;
+        const displayEducation = educations.map(education=>{
+            return <Education schoolInfo={education}/>
+        }) 
 		
-		return <div id="experience-list-container">educationlist</div>;
+		return <div id="experience-list-container">{displayEducation}</div>;
 	}
 }
 

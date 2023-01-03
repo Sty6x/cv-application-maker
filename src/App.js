@@ -22,7 +22,7 @@ class App extends React.Component {
 				jobLocation: "",
 				jobDescription: "",
 			},
-			education:[],
+			education: [],
 			userEducationInput: {
 				schoolName: "",
 				graduationYear: "",
@@ -35,6 +35,8 @@ class App extends React.Component {
 		this.handleExperienceInput = this.handleExperienceInput.bind(this);
 		this.addExperience = this.addExperience.bind(this);
 		this.removeExperience = this.removeExperience.bind(this);
+		this.handleEducationInput = this.handleEducationInput.bind(this);
+		this.addEducation = this.addEducation.bind(this);
 	}
 
 	handleSkillInput(e) {
@@ -90,8 +92,6 @@ class App extends React.Component {
 		}
 	}
 
-
-
 	handleEducationInput(e) {
 		if (e.target.id === "school-name-input") {
 			this.setState({
@@ -104,33 +104,32 @@ class App extends React.Component {
 
 		if (e.target.id === "school-location-input") {
 			this.setState({
-			userEducationInput:{
-				...this.state.userEducationInput,
-				schoolLocation:e.target.value,
-			}
+				userEducationInput: {
+					...this.state.userEducationInput,
+					schoolLocation: e.target.value,
+				},
 			});
 		}
 
 		if (e.target.id === "school-grad-date-input") {
 			this.setState({
-				userExperienceInput: {
-					...this.state.userExperienceInput,
-					jobLocation: e.target.value,
+				userEducationInput: {
+					...this.state.userEducationInput,
+					graduationYear: e.target.value,
 				},
 			});
 		}
 
 		if (e.target.id === "school-desc-input") {
 			this.setState({
-				userExperienceInput: {
-					...this.state.userExperienceInput,
-					startDate: e.target.value,
+				userEducationInput: {
+					...this.state.userEducationInput,
+					schoolDescription: e.target.value,
 				},
 			});
 		}
-
 	}
-	// need to remove value for each input filed that is added
+	// need to remove value for each input filled that is added
 	addSkill() {
 		if (this.state.input === "") {
 			return;
@@ -158,6 +157,14 @@ class App extends React.Component {
 		);
 	}
 
+	addEducation() {
+		this.setState(
+			{
+				education: this.state.education.concat(this.state.userEducationInput),
+			},
+			() => console.log(this.state)
+		);
+	}
 	removeExperience(e) {
 		const experienceIndex = e.target.parentNode.id;
 		const sliced = this.state.experience.splice(experienceIndex, 1);
@@ -188,8 +195,8 @@ class App extends React.Component {
 					/>
 				</div>
 				<div id="education">
-					<EducationInput />
-					<EducationList />
+					<EducationInput addEducationHandler={this.addEducation}inputHandler={this.handleEducationInput} />
+					<EducationList educationList={this.state.education}/>
 				</div>
 			</div>
 		);
