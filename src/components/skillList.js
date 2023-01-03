@@ -5,9 +5,13 @@ class SkillList extends React.Component{
         super(props)
     }
     render(){
+        const skills = this.props.skillsArr
+        let displaySkills = skills.map(skill=>{
+           return  <Skill skill={skill} />
+        })
         return(
-            <ul id="skill-list">
-                <Skill name={this.props.taskName}/>
+            <ul className="flex flex-col"  id="skill-list">
+                {displaySkills}
             </ul>
         )
     }

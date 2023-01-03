@@ -6,7 +6,7 @@ class Skill extends React.Component{
     }
     render(){
         return(
-            <li>{this.props.task}</li>
+            <li>{this.props.skill}</li>
         )
     }
 }

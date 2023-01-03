@@ -33,7 +33,7 @@ class App extends React.Component{
       <div id='app-container'>
         <input onChange={this.handleInput} type="text"/>
         <button onClick={this.addSkill} type='button'>Add Skill</button>
-        <SkillList/>
+        <SkillList skillsArr={this.state.skills}/>
       </div>
     )
   }
