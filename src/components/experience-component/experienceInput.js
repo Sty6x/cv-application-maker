@@ -5,6 +5,7 @@ class ExperienceInput extends React.Component {
 	}
 	render() {
         const inputHandler = this.props.inputHandler;
+        const addExpHandler = this.props.addExperienceHandler;
 		return (
 			<div id="experience-input-field">
 				<div id="job-input-container">
@@ -28,7 +29,7 @@ class ExperienceInput extends React.Component {
 					<input onChange={inputHandler} name="end-date-job-input" id="end-date-job-input" />
 				</div>
 				
-                <button type="button">Add Experience</button>
+                <button onClick={addExpHandler} type="button">Add Experience</button>
 			</div>
 		);
 	}

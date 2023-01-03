@@ -21,6 +21,7 @@ class App extends React.Component {
 		this.handleSkillInput = this.handleSkillInput.bind(this);
 		this.addSkill = this.addSkill.bind(this);
 		this.handleExperienceInput = this.handleExperienceInput.bind(this);
+		this.addExperience = this.addExperience.bind(this);
 	}
 
 	handleSkillInput(e) {
@@ -32,22 +33,6 @@ class App extends React.Component {
 				console.log(this.state);
 			}
 		);
-	}
-
-	addSkill() {
-		if (this.state.input === "") {
-			return;
-		} else {
-			this.setState(
-				{
-					skills: this.state.skills.concat(this.state.input),
-					input: "",
-				},
-				() => {
-					console.log(this.state);
-				}
-			);
-		}
 	}
 
 	handleExperienceInput(e) {
@@ -111,6 +96,32 @@ class App extends React.Component {
 			);
 		}
 	}
+
+	// need to remove value for each input filed that is added 
+	addSkill() {
+		if (this.state.input === "") {
+			return;
+		} else {
+			this.setState(
+				{
+					skills: this.state.skills.concat(this.state.input),
+					input: "",
+				},
+				() => {
+					console.log(this.state);
+				}
+			);
+		}
+	}
+
+	addExperience() {
+		this.setState(
+			{
+				experience: this.state.experience.concat(this.state.userExperienceInput),
+			},
+			() => console.log(this.state)
+		);
+	}
 	render() {
 		return (
 			<div>
@@ -124,7 +135,10 @@ class App extends React.Component {
 				</button>
 				<SkillList skillsArr={this.state.skills} />
 				<div>
-					<ExperienceInput inputHandler={this.handleExperienceInput} />
+					<ExperienceInput
+						addExperienceHandler={this.addExperience}
+						inputHandler={this.handleExperienceInput}
+					/>
 				</div>
 				<div>
 					<ExperienceList />
