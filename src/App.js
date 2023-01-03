@@ -32,11 +32,7 @@ class App extends React.Component {
 		this.setState(
 			{
 				input: e.target.value,
-			},
-			() => {
-				console.log(this.state);
-			}
-		);
+			});
 	}
 
 	handleExperienceInput(e) {
@@ -47,9 +43,7 @@ class App extends React.Component {
 						...this.state.userExperienceInput,
 						jobTitle: e.target.value,
 					},
-				},
-				() => console.log(this.state)
-			);
+				});
 		}
 
 		if (e.target.id === "desc-job-input") {
@@ -59,9 +53,7 @@ class App extends React.Component {
 						...this.state.userExperienceInput,
 						jobDescription: e.target.value,
 					},
-				},
-				() => console.log(this.state)
-			);
+				});
 		}
 
 		if (e.target.id === "location-job-input") {
@@ -71,9 +63,7 @@ class App extends React.Component {
 						...this.state.userExperienceInput,
 						jobLocation: e.target.value,
 					},
-				},
-				() => console.log(this.state)
-			);
+				});
 		}
 
 		if (e.target.id === "start-date-job-input") {
@@ -83,8 +73,7 @@ class App extends React.Component {
 						...this.state.userExperienceInput,
 						startDate: e.target.value,
 					},
-				},
-				() => console.log(this.state)
+				}
 			);
 		}
 
@@ -95,8 +84,7 @@ class App extends React.Component {
 						...this.state.userExperienceInput,
 						endDate: e.target.value,
 					},
-				},
-				() => console.log(this.state)
+				}
 			);
 		}
 	}
