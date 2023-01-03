@@ -2,6 +2,7 @@ import "./App.css";
 import React from "react";
 import SkillList from "./components/skillList";
 import ExperienceInput from "./components/experience-component/experienceInput";
+import ExperienceList from "./components/experience-component/experienceList";
 class App extends React.Component {
 	constructor(props) {
 		super(props);
@@ -52,9 +53,13 @@ class App extends React.Component {
 					Add Skill
 				</button>
 				<SkillList skillsArr={this.state.skills} />
+      
 				<>
 					<ExperienceInput />
 				</>
+        <>
+        <ExperienceList />
+        </>
 			</div>
 		);
 	}

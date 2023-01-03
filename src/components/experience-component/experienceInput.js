@@ -1,5 +1,4 @@
 import React from "react";
-
 class ExperienceInput extends React.Component {
 	constructor(props) {
 		super(props);
@@ -20,7 +19,7 @@ class ExperienceInput extends React.Component {
 					<input name="end-date-job-input" id="end-date-job-input" />
 				</div>
 				<div id="job-desc-input-container">
-					<label htmlFor="desc-job-input">End:</label>
+					<label htmlFor="desc-job-input">Description:</label>
 					<input name="desc-job-input" id="desc-job-input" />
 				</div>
 			</div>
