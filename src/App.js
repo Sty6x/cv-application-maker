@@ -6,7 +6,7 @@ import ExperienceList from "./components/experience-component/experienceList";
 import SkillInput from "./components/skill-component/skillInput";
 import EducationInput from "./components/education-component/educationInput";
 import EducationList from "./components/education-component/educationList";
-import PersonalInfoInput from "./components/contacts-component/personalInfoInput";
+import PersonalInfoInput from "./components/personalInfo-component/personalInfoInput";
 class App extends React.Component {
 	constructor(props) {
 		super(props);

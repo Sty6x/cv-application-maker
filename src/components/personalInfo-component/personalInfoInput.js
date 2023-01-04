@@ -20,7 +20,7 @@ class PersonalInfoInput extends React.Component {
 
 				<div id="image-file-cont">
 					<label htmlFor="image-file">Photo:</label>
-                    <input type="file" id="image-file" accept="image/jpeg, image/png, image/jpg"/>
+					<input type="file" id="image-file" accept="image/jpeg, image/png, image/jpg" />
 				</div>
 
 				<div id="email-input-cont">
@@ -28,14 +28,14 @@ class PersonalInfoInput extends React.Component {
 					<input type="email" id="email-input" />
 				</div>
 
+				<div id="address-input-cont">
+					<label htmlFor="address-input">Address:</label>
+					<input type="text" id="address-input" />
+				</div>
+
 				<div id="phone-input-cont">
 					<label htmlFor="phone-input">Phone Number:</label>
 					<input type="number" id="phone-input" />
-				</div>
-
-				<div id="introduction-input-cont">
-					<label htmlFor="introduction-input">:</label>
-					<textarea minLength="150" maxLength="385" id="introduction-input" />
 				</div>
 			</div>
 		);
