@@ -8,7 +8,7 @@ class Experience extends React.Component{
         return(
             <div id={this.props.ID} className="experience-container">
                 <div className="job-location-date">
-                    <p>{startDate}, {endDate}</p>
+                    <p>{startDate}-{endDate}</p>
                     <p className="job-location">{jobLocation}</p>
                 </div>
                 <div className="job-title-desc">
