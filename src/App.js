@@ -32,15 +32,7 @@ class App extends React.Component {
 				schoolLocation: "",
 				schoolDescription: "",
 			},
-			userPersonalInfoInput: {
-				name: "",
-				jobTitle: "",
-				emailAddress: "",
-				address: "",
-				phoneNumber:"",
-				photo: "",
-			},
-			personalInfo:{}
+			personalInfo: {},
 		};
 		this.handleSkillInput = this.handleSkillInput.bind(this);
 		this.addSkill = this.addSkill.bind(this);
@@ -50,6 +42,7 @@ class App extends React.Component {
 		this.handleEducationInput = this.handleEducationInput.bind(this);
 		this.addEducation = this.addEducation.bind(this);
 		this.removeEducation = this.removeEducation.bind(this);
+		this.handlePersonalInfoInput = this.handlePersonalInfoInput.bind(this);
 	}
 
 	handleSkillInput(e) {
@@ -58,6 +51,76 @@ class App extends React.Component {
 		});
 	}
 
+	handlePersonalInfoInput(e) {
+		switch (e.target.id) {
+			case "name-input":
+				this.setState(
+					{
+						personalInfo: {
+							...this.state.personalInfo,
+							name: e.target.value,
+						},
+					},
+					() => console.log(this.state)
+				);
+				break;
+			case "lf-input":
+				this.setState(
+					{
+						personalInfo: {
+							...this.state.personalInfo,
+							jobTitle: e.target.value,
+						},
+					},
+					() => console.log(this.state.personalInfo)
+				);
+				break;
+			case "image-file":
+				this.setState(
+					{
+						personalInfo: {
+							...this.state.personalInfo,
+							photo: e.target.value,
+						},
+					},
+					() => console.log(this.state.personalInfo)
+				);
+				break;
+			case "email-input":
+				this.setState(
+					{
+						personalInfo: {
+							...this.state.personalInfo,
+							emailAddress: e.target.value,
+						},
+					},
+					() => console.log(this.state.personalInfo)
+				);
+				break;
+			case "phone-input":
+				this.setState(
+					{
+						personalInfo: {
+							...this.state.personalInfo,
+							phoneNumber: e.target.value,
+						},
+					},
+					() => console.log(this.state.personalInfo)
+				);
+				break;
+			case "address-input":
+				this.setState(
+					{
+						personalInfo: {
+							...this.state.personalInfo,
+							address: e.target.value,
+						},
+					},
+					() => console.log(this.state.personalInfo)
+				);
+				break;
+		}
+	}
 	handleExperienceInput(e) {
 		if (e.target.id === "title-job-input") {
 			this.setState({
@@ -176,6 +239,7 @@ class App extends React.Component {
 			() => console.log(this.state)
 		);
 	}
+	// remove the other function
 	removeExperience(e) {
 		const experienceIndex = e.target.parentNode.id;
 		const sliced = this.state.experience.splice(experienceIndex, 1);
@@ -194,8 +258,9 @@ class App extends React.Component {
 		// Lists should be in another component to display the users input details
 		return (
 			<div id="app-container">
+				{this.state.personalInfo.name}, {this.state.personalInfo.jobTitle}
 				<div id="personal-info">
-					<PersonalInfoInput />
+					<PersonalInfoInput inputHandler={this.handlePersonalInfoInput} />
 				</div>
 
 				<div id="experience">

@@ -6,21 +6,22 @@ class PersonalInfoInput extends React.Component {
 	}
 
 	render() {
+		const inputHandler = this.props.inputHandler;
 		return (
 			<div id="personal-info-input-container">
 				<div id="name-input-cont">
 					<label htmlFor="name-input">Name:</label>
-					<input type="text" id="name-input" />
+					<input onChange={inputHandler} type="text" id="name-input" />
 				</div>
 
 				<div id="lf-input-cont">
 					<label htmlFor="lf-input">Job Title:</label>
-					<input type="text" id="lf-input" />
+					<input onChange={inputHandler} type="text" id="lf-input" />
 				</div>
 
 				<div id="image-file-cont">
 					<label htmlFor="image-file">Photo:</label>
-					<input type="file" id="image-file" accept="image/jpeg, image/png, image/jpg" />
+					<input onChange={inputHandler} type="file" id="image-file" accept="image/jpeg, image/png, image/jpg" />
 				</div>
 
 				<div id="email-input-cont">
