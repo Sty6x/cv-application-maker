@@ -26,17 +26,17 @@ class PersonalInfoInput extends React.Component {
 
 				<div id="email-input-cont">
 					<label htmlFor="email-input">Email Address:</label>
-					<input type="email" id="email-input" />
+					<input onChange={inputHandler} type="email" id="email-input" />
 				</div>
 
 				<div id="address-input-cont">
 					<label htmlFor="address-input">Address:</label>
-					<input type="text" id="address-input" />
+					<input onChange={inputHandler} type="text" id="address-input" />
 				</div>
 
 				<div id="phone-input-cont">
 					<label htmlFor="phone-input">Phone Number:</label>
-					<input type="number" id="phone-input" />
+					<input onChange={inputHandler} type="number" id="phone-input" />
 				</div>
 			</div>
 		);

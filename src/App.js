@@ -32,6 +32,16 @@ class App extends React.Component {
 				schoolLocation: "",
 				schoolDescription: "",
 			},
+			userPersonalInfoInput:{
+				name:"",
+				jobTitle:"",
+				phoneNumber:"",
+				emailAddress:"",
+				address:"",
+				photo:"",
+
+
+			},
 			personalInfo: {},
 		};
 		this.handleSkillInput = this.handleSkillInput.bind(this);
@@ -56,8 +66,8 @@ class App extends React.Component {
 			case "name-input":
 				this.setState(
 					{
-						personalInfo: {
-							...this.state.personalInfo,
+						userPersonalInfoInput: {
+							...this.state.userPersonalInfoInput,
 							name: e.target.value,
 						},
 					},
@@ -67,8 +77,8 @@ class App extends React.Component {
 			case "lf-input":
 				this.setState(
 					{
-						personalInfo: {
-							...this.state.personalInfo,
+						userPersonalInfoInput: {
+							...this.state.userPersonalInfoInput,
 							jobTitle: e.target.value,
 						},
 					},
@@ -78,8 +88,8 @@ class App extends React.Component {
 			case "image-file":
 				this.setState(
 					{
-						personalInfo: {
-							...this.state.personalInfo,
+						userPersonalInfoInput: {
+							...this.state.userPersonalInfoInput,
 							photo: e.target.value,
 						},
 					},
@@ -89,8 +99,8 @@ class App extends React.Component {
 			case "email-input":
 				this.setState(
 					{
-						personalInfo: {
-							...this.state.personalInfo,
+						userPersonalInfoInput: {
+							...this.state.userPersonalInfoInput,
 							emailAddress: e.target.value,
 						},
 					},
@@ -100,8 +110,8 @@ class App extends React.Component {
 			case "phone-input":
 				this.setState(
 					{
-						personalInfo: {
-							...this.state.personalInfo,
+						userPersonalInfoInput: {
+							...this.state.userPersonalInfoInput,
 							phoneNumber: e.target.value,
 						},
 					},
@@ -111,8 +121,8 @@ class App extends React.Component {
 			case "address-input":
 				this.setState(
 					{
-						personalInfo: {
-							...this.state.personalInfo,
+						userPersonalInfoInput: {
+							...this.state.userPersonalInfoInput,
 							address: e.target.value,
 						},
 					},
