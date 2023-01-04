@@ -38,6 +38,7 @@ class PersonalInfoInput extends React.Component {
 					<label htmlFor="phone-input">Phone Number:</label>
 					<input onChange={inputHandler} type="number" id="phone-input" />
 				</div>
+				<button type="button" onClick={this.props.addPersonalInfo}> Add Info</button>
 			</div>
 		);
 	}

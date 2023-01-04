@@ -32,15 +32,13 @@ class App extends React.Component {
 				schoolLocation: "",
 				schoolDescription: "",
 			},
-			userPersonalInfoInput:{
-				name:"",
-				jobTitle:"",
-				phoneNumber:"",
-				emailAddress:"",
-				address:"",
-				photo:"",
-
-
+			userPersonalInfoInput: {
+				name: "",
+				jobTitle: "",
+				phoneNumber: "",
+				emailAddress: "",
+				address: "",
+				photo: "",
 			},
 			personalInfo: {},
 		};
@@ -53,6 +51,7 @@ class App extends React.Component {
 		this.addEducation = this.addEducation.bind(this);
 		this.removeEducation = this.removeEducation.bind(this);
 		this.handlePersonalInfoInput = this.handlePersonalInfoInput.bind(this);
+		this.addPersonalInfo = this.addPersonalInfo.bind(this)
 	}
 
 	handleSkillInput(e) {
@@ -70,8 +69,7 @@ class App extends React.Component {
 							...this.state.userPersonalInfoInput,
 							name: e.target.value,
 						},
-					},
-					() => console.log(this.state)
+					}
 				);
 				break;
 			case "lf-input":
@@ -81,8 +79,7 @@ class App extends React.Component {
 							...this.state.userPersonalInfoInput,
 							jobTitle: e.target.value,
 						},
-					},
-					() => console.log(this.state.personalInfo)
+					}
 				);
 				break;
 			case "image-file":
@@ -103,8 +100,7 @@ class App extends React.Component {
 							...this.state.userPersonalInfoInput,
 							emailAddress: e.target.value,
 						},
-					},
-					() => console.log(this.state.personalInfo)
+					}
 				);
 				break;
 			case "phone-input":
@@ -114,8 +110,7 @@ class App extends React.Component {
 							...this.state.userPersonalInfoInput,
 							phoneNumber: e.target.value,
 						},
-					},
-					() => console.log(this.state.personalInfo)
+					}
 				);
 				break;
 			case "address-input":
@@ -125,8 +120,7 @@ class App extends React.Component {
 							...this.state.userPersonalInfoInput,
 							address: e.target.value,
 						},
-					},
-					() => console.log(this.state.personalInfo)
+					}
 				);
 				break;
 		}
@@ -235,7 +229,9 @@ class App extends React.Component {
 	addExperience() {
 		this.setState(
 			{
-				experience: this.state.experience.concat(this.state.userExperienceInput),
+				experience: this.state.experience.concat(
+					this.state.userExperienceInput
+				),
 			},
 			() => console.log(this.state)
 		);
@@ -249,6 +245,18 @@ class App extends React.Component {
 			() => console.log(this.state)
 		);
 	}
+
+	addPersonalInfo() {
+		this.setState(
+			{
+				personalInfo: {
+					...this.state.userPersonalInfoInput,
+				},
+			},
+			() => console.log(this.state)
+		);
+	}
+
 	// remove the other function
 	removeExperience(e) {
 		const experienceIndex = e.target.parentNode.id;
@@ -268,11 +276,12 @@ class App extends React.Component {
 		// Lists should be in another component to display the users input details
 		return (
 			<div id="app-container">
-				{this.state.personalInfo.name}, {this.state.personalInfo.jobTitle}
 				<div id="personal-info">
-					<PersonalInfoInput inputHandler={this.handlePersonalInfoInput} />
+					<PersonalInfoInput
+						addPersonalInfo={this.addPersonalInfo}
+						inputHandler={this.handlePersonalInfoInput}
+					/>
 				</div>
-
 				<div id="experience">
 					<ExperienceInput
 						addExperienceHandler={this.addExperience}
@@ -298,7 +307,10 @@ class App extends React.Component {
 					/>
 				</div>
 				<div id="skill">
-					<SkillInput handleSkillInput={this.handleSkillInput} addSkill={this.addSkill} />
+					<SkillInput
+						handleSkillInput={this.handleSkillInput}
+						addSkill={this.addSkill}
+					/>
 					<SkillList skillsArr={this.state.skills} />
 				</div>
 			</div>
