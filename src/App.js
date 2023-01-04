@@ -32,6 +32,15 @@ class App extends React.Component {
 				schoolLocation: "",
 				schoolDescription: "",
 			},
+			userPersonalInfoInput: {
+				name: "",
+				jobTitle: "",
+				emailAddress: "",
+				address: "",
+				phoneNumber:"",
+				photo: "",
+			},
+			personalInfo:{}
 		};
 		this.handleSkillInput = this.handleSkillInput.bind(this);
 		this.addSkill = this.addSkill.bind(this);
