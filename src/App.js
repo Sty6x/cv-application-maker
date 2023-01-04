@@ -6,6 +6,7 @@ import ExperienceList from "./components/experience-component/experienceList";
 import SkillInput from "./components/skill-component/skillInput";
 import EducationInput from "./components/education-component/educationInput";
 import EducationList from "./components/education-component/educationList";
+import PersonalInfoInput from "./components/contacts-component/personalInfoInput";
 class App extends React.Component {
 	constructor(props) {
 		super(props);
@@ -181,12 +182,13 @@ class App extends React.Component {
 		this.setState({});
 	}
 	render() {
+		// Lists should be in another component to display the users input details
 		return (
 			<div id="app-container">
-				<div id="skill">
-					<SkillInput handleSkillInput={this.handleSkillInput} addSkill={this.addSkill} />
-					<SkillList skillsArr={this.state.skills} />
+				<div id="personal-info">
+					<PersonalInfoInput />
 				</div>
+
 				<div id="experience">
 					<ExperienceInput
 						addExperienceHandler={this.addExperience}
@@ -210,6 +212,10 @@ class App extends React.Component {
 						educKey={this.state.educKey}
 						educationList={this.state.education}
 					/>
+				</div>
+				<div id="skill">
+					<SkillInput handleSkillInput={this.handleSkillInput} addSkill={this.addSkill} />
+					<SkillList skillsArr={this.state.skills} />
 				</div>
 			</div>
 		);

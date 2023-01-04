@@ -1,6 +1,6 @@
 import React from "react";
 
-class ContactInput extends React.Component {
+class PersonalInfoInput extends React.Component {
 	constructor(props) {
 		super(props);
 	}
@@ -20,7 +20,7 @@ class ContactInput extends React.Component {
 
 				<div id="image-file-cont">
 					<label htmlFor="image-file">Photo:</label>
-					<input type="image" id="image-file" />
+                    <input type="file" id="image-file" accept="image/jpeg, image/png, image/jpg"/>
 				</div>
 
 				<div id="email-input-cont">
@@ -42,5 +42,4 @@ class ContactInput extends React.Component {
 	}
 }
 
-
-export default ContactInput;
+export default PersonalInfoInput;
