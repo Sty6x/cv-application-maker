@@ -1,3 +1,39 @@
+@font-face {
+	font-family: "poppins";
+	src: url("../src/assets/fonts/Poppins-Regular.woff2") format("woff2");
+	font-style: normal;
+	font-weight: 400;
+}
+
+@font-face {
+	font-family: "poppins";
+	src: url("../src/assets/fonts/Poppins-Medium.woff2") format("woff2");
+	font-style: normal;
+	font-weight: 500;
+}
+@font-face {
+	font-family: "poppins";
+	src: url("../src/assets/fonts/Poppins-Bold.woff2") format("woff2");
+	font-style: normal;
+	font-weight: 700;
+}
+
+@font-face {
+	font-family: "poppins";
+	src: url("../src/assets/fonts/Poppins-Bold.woff2") format("woff2");
+	font-style: normal;
+	font-weight: 800;
+}
+@font-face {
+	font-family: "poppins";
+	src: url("../src/assets/fonts/Poppins-SemiBold.woff2") format("woff2");
+	font-style: normal;
+	font-weight: 600;
+}
+
+body {
+	font-family: "poppins";
+}
 input {
 	border: #282c34 solid 2px;
 	display: block;
@@ -7,6 +43,10 @@ button {
 	background-color: #282c34;
 	border: #282c34 solid 1px;
 }
-#app-container> div{
-	border: #1f448e solid 2px;
+
+h3.side-titles {
+	display: block;
+	white-space: nowrap;
+	font-weight: 500;
 }
+

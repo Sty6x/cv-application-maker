@@ -11,7 +11,7 @@ class SkillList extends React.Component{
            return  <Skill skill={skill} />
         })
         return(
-            <ul className="flex flex-col"  id="skill-list">
+            <ul className="flex flex-col text-white"  id="skill-list">
                 <h3 className="side-titles">Skills:</h3>
                 {displaySkills}
             </ul>
