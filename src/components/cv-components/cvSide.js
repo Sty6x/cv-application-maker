@@ -1,5 +1,7 @@
 import React from "react";
-
+import CVPhoto from "../personalInfo-component/CVphoto"
+import PersonalInfo from "../personalInfo-component/personalInfo";
+import SkillList from "../skill-component/skillList";
 class CVside extends React.Component{
 
     constructor(props){
@@ -9,7 +11,9 @@ class CVside extends React.Component{
     render(){
         return(
             <div id="cv-side">
-                side
+                <CVPhoto/>
+                <PersonalInfo/>
+                {/* <SkillList/> */}
             </div>
         )
     }

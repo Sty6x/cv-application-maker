@@ -13,3 +13,5 @@ class CVphoto extends React.Component {
         )
     }
 }
+
+export default CVphoto

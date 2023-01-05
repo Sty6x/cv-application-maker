@@ -24,3 +24,5 @@ class PersonalInfo extends React.Component{
     }
 
 }
+
+export default PersonalInfo
