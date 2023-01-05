@@ -277,7 +277,7 @@ class App extends React.Component {
 		return (
 			<div id="app-container">
 				<div id="personal-info">
-					<PersonalInfoInput
+					<PersonalInfoInput 
 						addPersonalInfo={this.addPersonalInfo}
 						inputHandler={this.handlePersonalInfoInput}
 					/>
