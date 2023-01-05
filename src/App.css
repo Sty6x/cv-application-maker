@@ -49,5 +49,16 @@ h3.side-titles {
 	display: block;
 	white-space: nowrap;
 	font-weight: 500;
+	position: relative;
+	margin-bottom: 10px;
+	text-transform: uppercase;
 }
 
+h3.side-titles::after{
+	content: '';
+	width: 100% ;
+	height: 5px;
+	background-color:#4C566A;
+	display: block;
+	position: absolute;
+}
