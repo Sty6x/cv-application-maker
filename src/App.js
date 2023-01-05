@@ -287,31 +287,20 @@ class App extends React.Component {
 						addExperienceHandler={this.addExperience}
 						inputHandler={this.handleExperienceInput}
 					/>
-					<ExperienceList
-						removeExpHandler={this.removeExperience}
-						expID={this.state.expID}
-						expKey={this.state.expKey}
-						experienceList={this.state.experience}
-					/>
+					
 				</div>
 				<div id="education">
 					<EducationInput
 						addEducationHandler={this.addEducation}
 						inputHandler={this.handleEducationInput}
 					/>
-					<EducationList
-						removeEducHandler={this.removeEducation}
-						educID={this.state.educID}
-						educKey={this.state.educKey}
-						educationList={this.state.education}
-					/>
+				
 				</div>
 				<div id="skill">
 					<SkillInput
 						handleSkillInput={this.handleSkillInput}
 						addSkill={this.addSkill}
 					/>
-					<SkillList skillsArr={this.state.skills} />
 				</div>
 			</div>
 		);
