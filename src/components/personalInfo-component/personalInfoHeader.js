@@ -14,3 +14,5 @@ class PersonalInfoHeader extends React.Component {
 		);
 	}
 }
+
+export default PersonalInfoHeader
