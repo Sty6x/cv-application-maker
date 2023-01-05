@@ -9,15 +9,16 @@ class PersonalInfo extends React.Component{
     
     render(){
         return(
-            <div id="personal-info-containr">
+            <div id="personal-info-container">
+                <h3 className="side-titles">Personal Information:</h3>
                 <div id="email-address">
-                    <p></p>
+                    <p>Jerylfranz@gmail.com</p>
                 </div> 
                 <div id="phone-number">
-                    <p></p>
+                    <p>09284719828</p>
                 </div> 
                 <div id="address">
-                    <p></p>
+                    <p>Dubai, Al rigga</p>
                 </div> 
             </div>
         )

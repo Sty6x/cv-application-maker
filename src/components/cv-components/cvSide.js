@@ -11,10 +11,10 @@ class CVside extends React.Component{
    // delegate personalInfo object and skillarr 
     render(){
         return(
-            <div id="cv-side" className="min-w-[20%] ">
+            <div id="cv-side" className=" min-w-[30%] flex flex-col py-3 px-7 ">
                 <CVPhoto/>
                 <PersonalInfo/>
-                {/* <SkillList/> */}
+                <SkillList/>
             </div>
         )
     }

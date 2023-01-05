@@ -3,14 +3,16 @@ import Skill from "./skill";
 class SkillList extends React.Component{
     constructor(props){
         super(props)
+        this.skillss = ['skill 1', 'skill 2' ,'skill 3','skill 4','skill 5']
     }
     render(){
         const skills = this.props.skillsArr
-        let displaySkills = skills.map(skill=>{
+        let displaySkills = this.skillss.map(skill=>{
            return  <Skill skill={skill} />
         })
         return(
-            <ul className="flex flex-col bg-slate-500"  id="skill-list">
+            <ul className="flex flex-col"  id="skill-list">
+                <h3 className="side-titles">Skills:</h3>
                 {displaySkills}
             </ul>
         )
