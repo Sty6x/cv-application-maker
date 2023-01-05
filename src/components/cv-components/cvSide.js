@@ -11,7 +11,7 @@ class CVside extends React.Component{
    // delegate personalInfo object and skillarr 
     render(){
         return(
-            <div id="cv-side" className=" bg-[#3B4252] min-w-[30%] flex flex-col py-7 px-3 ">
+            <div id="cv-side" className=" bg-[#3B4252] min-w-[30%] gap-8 flex flex-col py-7 px-3 ">
                 <CVPhoto/>
                 <PersonalInfo/>
                 <SkillList/>

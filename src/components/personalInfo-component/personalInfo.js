@@ -9,7 +9,7 @@ class PersonalInfo extends React.Component{
     
     render(){
         return(
-            <div id="personal-info-container" className="text-white">
+            <div id="personal-info-container" className="flex flex-col text-white">
                 <h3 className="side-titles">Personal Information:</h3>
                 <div id="email-address">
                     <p>Jerylfranz@gmail.com</p>

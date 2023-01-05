@@ -52,6 +52,7 @@ h3.side-titles {
 	position: relative;
 	margin-bottom: 10px;
 	text-transform: uppercase;
+
 }
 
 h3.side-titles::after{
@@ -61,4 +62,9 @@ h3.side-titles::after{
 	background-color:#4C566A;
 	display: block;
 	position: absolute;
+}
+
+#skill-list,#personal-info-container{
+	gap:8px;
+
 }
