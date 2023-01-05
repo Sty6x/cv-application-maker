@@ -266,9 +266,9 @@ class App extends React.Component {
 	render() {
 		// Lists should be in another component to display the users input details
 		return (
-			<div id="app-container" className="flex min-h-screen min-w-full">
+			<div id="app-container" className="flex ">
 				<SideBar />
-				<div id="cv-outer-body-container" className="flex flex-1 justify-center px-16 py-12">
+				<div id="cv-outer-body-container" className="min-h-[800px] flex flex-1 justify-center px-16 py-12">
 					<CVbody />
 				</div>
 			</div>

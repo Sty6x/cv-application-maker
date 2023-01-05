@@ -9,7 +9,7 @@ class CVmain extends React.Component {
 	// delegate education and experience arrays here from App.js
 	render() {
 		return (
-			<div id="cv-main-container" className="border-black border-2 border-solid min-h-[800px]">
+			<div id="cv-main-container" className="bg-[#ebf0f8] min-h-[800px]">
                 {/* make an introduction Component */}
 				{/* <ExperienceList/> */}
 				{/* <EducationList/> */}

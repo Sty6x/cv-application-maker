@@ -11,7 +11,7 @@ class SideBar extends React.Component{
 
     render(){
         return(
-            <div id="sidebar-container">
+            <div className="max-h-full" id="sidebar-container">
                 <PersonalInfoInput/>
                 <ExperienceInput/>
                 <EducationInput/>
