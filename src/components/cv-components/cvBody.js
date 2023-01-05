@@ -1,8 +1,7 @@
 import React from "react";
-import CVhead from "./cvHead";
 import CVmain from "./cvMain";
 import CVside from "./cvSide";
-
+import CVhead from "./cvHead"
 class CVbody extends React.Component {
 	constructor(props) {
 		super(props);
@@ -11,10 +10,10 @@ class CVbody extends React.Component {
 	render() {
 		return (
 			<div id="cv-body-container">
-				<CVside />
+				<CVside/>	
 				<div id="header-main-container">
-					<CVhead />
-					<CVmain />
+				<CVhead/>
+				<CVmain/>	
 				</div>
 			</div>
 		);

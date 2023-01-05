@@ -6,7 +6,9 @@ class CVhead extends React.Component {
 	}
 
 	render() {
-		return <PersonalInfoHeader />;
+		return (
+				<PersonalInfoHeader />
+		);
 	}
 }
 

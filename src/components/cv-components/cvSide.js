@@ -9,7 +9,7 @@ class CVside extends React.Component{
     render(){
         return(
             <div id="cv-side">
-
+                side
             </div>
         )
     }

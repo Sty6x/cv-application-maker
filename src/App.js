@@ -7,6 +7,8 @@ import SkillInput from "./components/skill-component/skillInput";
 import EducationInput from "./components/education-component/educationInput";
 import EducationList from "./components/education-component/educationList";
 import PersonalInfoInput from "./components/personalInfo-component/personalInfoInput";
+import CVbody from "./components/cv-components/cvBody";
+
 class App extends React.Component {
 	constructor(props) {
 		super(props);
@@ -276,6 +278,7 @@ class App extends React.Component {
 		// Lists should be in another component to display the users input details
 		return (
 			<div id="app-container">
+				<CVbody/>
 				<div id="personal-info">
 					<PersonalInfoInput 
 						addPersonalInfo={this.addPersonalInfo}
