@@ -9,7 +9,7 @@ class CVbody extends React.Component {
 
 	render() {
 		return (
-			<div id="cv-body-container">
+			<div id="cv-body-container" className="flex ">
 				<CVside />
 				<div id="header-main-container">
 					<CVhead />

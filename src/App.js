@@ -8,6 +8,7 @@ import EducationInput from "./components/education-component/educationInput";
 import EducationList from "./components/education-component/educationList";
 import PersonalInfoInput from "./components/personalInfo-component/personalInfoInput";
 import CVbody from "./components/cv-components/cvBody";
+import SideBar from "./components/sidebarInput-component/sidebar";
 
 class App extends React.Component {
 	constructor(props) {
@@ -53,7 +54,7 @@ class App extends React.Component {
 		this.addEducation = this.addEducation.bind(this);
 		this.removeEducation = this.removeEducation.bind(this);
 		this.handlePersonalInfoInput = this.handlePersonalInfoInput.bind(this);
-		this.addPersonalInfo = this.addPersonalInfo.bind(this)
+		this.addPersonalInfo = this.addPersonalInfo.bind(this);
 	}
 
 	handleSkillInput(e) {
@@ -65,24 +66,20 @@ class App extends React.Component {
 	handlePersonalInfoInput(e) {
 		switch (e.target.id) {
 			case "name-input":
-				this.setState(
-					{
-						userPersonalInfoInput: {
-							...this.state.userPersonalInfoInput,
-							name: e.target.value,
-						},
-					}
-				);
+				this.setState({
+					userPersonalInfoInput: {
+						...this.state.userPersonalInfoInput,
+						name: e.target.value,
+					},
+				});
 				break;
 			case "lf-input":
-				this.setState(
-					{
-						userPersonalInfoInput: {
-							...this.state.userPersonalInfoInput,
-							jobTitle: e.target.value,
-						},
-					}
-				);
+				this.setState({
+					userPersonalInfoInput: {
+						...this.state.userPersonalInfoInput,
+						jobTitle: e.target.value,
+					},
+				});
 				break;
 			case "image-file":
 				this.setState(
@@ -96,34 +93,28 @@ class App extends React.Component {
 				);
 				break;
 			case "email-input":
-				this.setState(
-					{
-						userPersonalInfoInput: {
-							...this.state.userPersonalInfoInput,
-							emailAddress: e.target.value,
-						},
-					}
-				);
+				this.setState({
+					userPersonalInfoInput: {
+						...this.state.userPersonalInfoInput,
+						emailAddress: e.target.value,
+					},
+				});
 				break;
 			case "phone-input":
-				this.setState(
-					{
-						userPersonalInfoInput: {
-							...this.state.userPersonalInfoInput,
-							phoneNumber: e.target.value,
-						},
-					}
-				);
+				this.setState({
+					userPersonalInfoInput: {
+						...this.state.userPersonalInfoInput,
+						phoneNumber: e.target.value,
+					},
+				});
 				break;
 			case "address-input":
-				this.setState(
-					{
-						userPersonalInfoInput: {
-							...this.state.userPersonalInfoInput,
-							address: e.target.value,
-						},
-					}
-				);
+				this.setState({
+					userPersonalInfoInput: {
+						...this.state.userPersonalInfoInput,
+						address: e.target.value,
+					},
+				});
 				break;
 		}
 	}
@@ -231,9 +222,7 @@ class App extends React.Component {
 	addExperience() {
 		this.setState(
 			{
-				experience: this.state.experience.concat(
-					this.state.userExperienceInput
-				),
+				experience: this.state.experience.concat(this.state.userExperienceInput),
 			},
 			() => console.log(this.state)
 		);
@@ -277,33 +266,10 @@ class App extends React.Component {
 	render() {
 		// Lists should be in another component to display the users input details
 		return (
-			<div id="app-container">
-				<CVbody/>
-				<div id="personal-info">
-					<PersonalInfoInput 
-						addPersonalInfo={this.addPersonalInfo}
-						inputHandler={this.handlePersonalInfoInput}
-					/>
-				</div>
-				<div id="experience">
-					<ExperienceInput
-						addExperienceHandler={this.addExperience}
-						inputHandler={this.handleExperienceInput}
-					/>
-					
-				</div>
-				<div id="education">
-					<EducationInput
-						addEducationHandler={this.addEducation}
-						inputHandler={this.handleEducationInput}
-					/>
-				
-				</div>
-				<div id="skill">
-					<SkillInput
-						handleSkillInput={this.handleSkillInput}
-						addSkill={this.addSkill}
-					/>
+			<div id="app-container" className="flex min-h-screen min-w-full">
+				<SideBar />
+				<div id="cv-outer-body-container" className="flex flex-1 justify-center px-16 py-12">
+					<CVbody />
 				</div>
 			</div>
 		);
