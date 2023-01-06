@@ -89,13 +89,26 @@ h3.side-titles::after {
 }
 
 .job-title-desc,
-.school-name-desc {
+.school-name-course {
 	width: 70%;
 }
 
 #experience-list-container,
 #education-list-container {
-display: flex;
-flex-direction: column;
-gap: 15px;
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+}
+
+.school-location-date,
+.school-name-course,
+.job-location-date,
+.job-title-desc{
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+}
+
+.job-title-company,.school-name{
+	font-weight: 600;
 }

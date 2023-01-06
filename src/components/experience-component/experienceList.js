@@ -13,7 +13,7 @@ class ExperienceList extends React.Component {
 				endDate: 2022,
 				jobLocation: "Dubai",
 				jobTitle: "Pc Maintenance",
-				jobDescription: "a little f this, and a little bit of that",
+				jobDescription: "aa little f this, and a littlea little f this, and a littlea little f this, and a littlea little f this, and a little little f this, and a little bit of that",
 			},
 			{
 				startDate: 2019,
