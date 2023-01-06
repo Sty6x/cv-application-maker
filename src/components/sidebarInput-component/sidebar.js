@@ -1,5 +1,6 @@
 import React from "react";
 import IntroductionInput from "../../introduction-component/introductionInput";
+import AchievementInput from "../achievements-component/achievementsInput";
 import EducationInput from "../education-component/educationInput";
 import ExperienceInput from "../experience-component/experienceInput";
 import PersonalInfoInput from "../personalInfo-component/personalInfoInput";
@@ -18,6 +19,7 @@ class SideBar extends React.Component{
                 <ExperienceInput/>
                 <EducationInput/>
                 <SkillInput/>
+                <AchievementInput/>
             </div>
         )
     }

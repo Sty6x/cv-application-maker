@@ -1,4 +1,5 @@
 import React from "react";
+import AchievementList from "../achievements-component/achievementList";
 import CVPhoto from "../personalInfo-component/CVphoto"
 import PersonalInfo from "../personalInfo-component/personalInfo";
 import SkillList from "../skill-component/skillList";
@@ -15,6 +16,7 @@ class CVside extends React.Component{
                 <CVPhoto/>
                 <PersonalInfo/>
                 <SkillList/>
+                <AchievementList/>
             </div>
         )
     }
