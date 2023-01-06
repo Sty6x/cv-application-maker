@@ -10,7 +10,7 @@ class IntroductionInput extends React.Component {
 			<>
 				<div id="intro-input-container">
 					<label htmlFor="introduction-input">Introduction:</label>
-					<input type="text" id="introduction-input" />
+					<textarea className="block" maxLength="380" minLength="150" id="introduction-input" />
 				</div>
 			</>
 		);
