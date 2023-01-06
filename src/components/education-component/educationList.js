@@ -8,17 +8,17 @@ class EducationList extends React.Component {
 	render() {
 		const educations = [
 			{
-				schoolMame: "University of St.La salle",
+				schoolName: "University of St.La salle",
 				graduationYear: "2020",
 				schoolLocation: "bacolod",
-				schoolDescription: "stem",
+				course: "stem",
 			},
 
 			{
 				schoolName: "nohs",
 				graduationYear: "2019",
 				schoolLocation: "bacolod",
-				schoolDescription: "stem",
+				course: "stem",
 			},
 		];
 		const { educKey, educID } = this.props;

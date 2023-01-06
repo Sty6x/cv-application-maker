@@ -23,6 +23,14 @@ class ExperienceList extends React.Component {
 				jobTitle: "Pc Maintenance",
 				jobDescription: "a little bit of this, and a little bit of that",
 			},
+			{
+				startDate: 2019,
+				companyName: "PcFix",
+				endDate: 2022,
+				jobLocation: "Dubai",
+				jobTitle: "Pc Maintenance",
+				jobDescription: "a little bit of this, and a little bit of that",
+			},
 		];
 		let key = this.props.expKey;
 		let ID = this.props.expID;

@@ -6,19 +6,16 @@ class Education extends React.Component {
 	}
 
 	render() {
-        const {graduationYear,schoolDescription,schoolLocation,schoolName} = this.props.schoolInfo;
+        const {graduationYear,course,schoolLocation,schoolName} = this.props.schoolInfo;
 		return (
 			<div id={this.props.ID} className="education-container">
-
 				<div className="education-location-date">
-					<p>
-						{graduationYear}
-					</p>
+					<p className="school-year">{graduationYear}</p>
 					<p className="school-location">{schoolLocation}</p>
 				</div>
 				<div className="school-name-desc">
 					<h3 className="school-name">{schoolName}</h3>
-					<p className="school-desc">{schoolDescription}</p>
+					<p className="school-course">{course}</p>
 				</div>
 				{/* <button onClick={this.props.removeEducation} type="button">
 					Remove Education
