@@ -21,6 +21,7 @@ class App extends React.Component {
 			experience: [],
 			userExperienceInput: {
 				jobTitle: "",
+				companyName:"",
 				startDate: "",
 				endDate: "",
 				jobLocation: "",
@@ -125,6 +126,15 @@ class App extends React.Component {
 				userExperienceInput: {
 					...this.state.userExperienceInput,
 					jobTitle: e.target.value,
+				},
+			});
+		}
+
+if (e.target.id === "company-name-input") {
+			this.setState({
+				userExperienceInput: {
+					...this.state.userExperienceInput,
+					companyName: e.target.value,
 				},
 			});
 		}

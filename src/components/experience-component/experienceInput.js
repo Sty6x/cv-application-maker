@@ -4,19 +4,23 @@ class ExperienceInput extends React.Component {
 		super(props);
 	}
 	render() {
-        const inputHandler = this.props.inputHandler;
-        const addExpHandler = this.props.addExperienceHandler;
+		const inputHandler = this.props.inputHandler;
+		const addExpHandler = this.props.addExperienceHandler;
 		return (
 			<div id="experience-input-field">
 				<div id="job-input-container">
 					<label htmlFor="job-input">Job:</label>
 					<input onChange={inputHandler} name="job-input" id="title-job-input" />
 				</div>
-                <div id="job-location-input-container">
+				<div id="company-name-container">
+					<label htmlFor="company-name-input">Job:</label>
+					<input onChange={inputHandler} name="company-name-input" id="company-name-input" />
+				</div>
+				<div id="job-location-input-container">
 					<label htmlFor="location-job-input">Location:</label>
 					<input onChange={inputHandler} name="location-job-input" id="location-job-input" />
 				</div>
-                <div id="job-desc-input-container">
+				<div id="job-desc-input-container">
 					<label htmlFor="desc-job-input">Description:</label>
 					<input onChange={inputHandler} name="desc-job-input" id="desc-job-input" />
 				</div>
@@ -28,12 +32,13 @@ class ExperienceInput extends React.Component {
 					<label htmlFor="end-date-job-input">End:</label>
 					<input onChange={inputHandler} name="end-date-job-input" id="end-date-job-input" />
 				</div>
-				
-                <button onClick={addExpHandler} type="button">Add Experience</button>
+
+				<button onClick={addExpHandler} type="button">
+					Add Experience
+				</button>
 			</div>
 		);
 	}
 }
 
-
-export default ExperienceInput
+export default ExperienceInput;

@@ -7,8 +7,22 @@ class ExperienceList extends React.Component {
 
 	render() {
 		const experiences = [
-			{ startDate: 2019, endDate: 2022, jobLocation: "Dubai", jobTitle: "Pc Maintenance" },
-			{ startDate: 2019, endDate: 2022, jobLocation: "Dubai", jobTitle: "Pc Maintenance" },
+			{
+				startDate: 2019,
+				companyName: "PcFix",
+				endDate: 2022,
+				jobLocation: "Dubai",
+				jobTitle: "Pc Maintenance",
+				jobDescription: "a little bit of this, and a little bit of that",
+			},
+			{
+				startDate: 2019,
+				companyName: "PcFix",
+				endDate: 2022,
+				jobLocation: "Dubai",
+				jobTitle: "Pc Maintenance",
+				jobDescription: "a little bit of this, and a little bit of that",
+			},
 		];
 		let key = this.props.expKey;
 		let ID = this.props.expID;
@@ -22,7 +36,12 @@ class ExperienceList extends React.Component {
 				/>
 			);
 		});
-		return <div id="experience-list-container">{displayExperience}</div>;
+		return (
+			<div id="experience-container">
+				<h3 className="main-titles">Experience</h3>
+				<div id="experience-list-container">{displayExperience}</div>
+			</div>
+		);
 	}
 }
 
