@@ -204,7 +204,7 @@ class App extends React.Component {
 			});
 		}
 
-		if (e.target.id === "school-desc-input") {
+		if (e.target.id === "school-course-input") {
 			this.setState({
 				userEducationInput: {
 					...this.state.userEducationInput,
@@ -275,7 +275,6 @@ class App extends React.Component {
 		this.setState({});
 	}
 	render() {
-		// Lists should be in another component to display the users input details
 		return (
 			<div id="app-container" className="flex ">
 				<SideBar />
