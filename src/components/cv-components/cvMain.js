@@ -13,7 +13,7 @@ class CVmain extends React.Component {
 			<div id="cv-main-container" className="bg-[#ebf0f8] min-h-[800px]">
 				<Introduction/>
 				 <ExperienceList/> 
-				 {/* <EducationList/>  */}
+				 <EducationList/> 
 			</div>
 		);
 	}

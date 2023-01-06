@@ -21,7 +21,7 @@ class App extends React.Component {
 			experience: [],
 			userExperienceInput: {
 				jobTitle: "",
-				companyName:"",
+				companyName: "",
 				startDate: "",
 				endDate: "",
 				jobLocation: "",
@@ -34,7 +34,7 @@ class App extends React.Component {
 				schoolName: "",
 				graduationYear: "",
 				schoolLocation: "",
-				schoolDescription: "",
+				course: "",
 			},
 			userPersonalInfoInput: {
 				name: "",
@@ -45,7 +45,7 @@ class App extends React.Component {
 				photo: "",
 			},
 			personalInfo: {},
-			introduction:""
+			introduction: "",
 		};
 		this.handleSkillInput = this.handleSkillInput.bind(this);
 		this.addSkill = this.addSkill.bind(this);
@@ -130,7 +130,7 @@ class App extends React.Component {
 			});
 		}
 
-if (e.target.id === "company-name-input") {
+		if (e.target.id === "company-name-input") {
 			this.setState({
 				userExperienceInput: {
 					...this.state.userExperienceInput,
@@ -208,7 +208,7 @@ if (e.target.id === "company-name-input") {
 			this.setState({
 				userEducationInput: {
 					...this.state.userEducationInput,
-					schoolDescription: e.target.value,
+					course: e.target.value,
 				},
 			});
 		}
@@ -279,7 +279,10 @@ if (e.target.id === "company-name-input") {
 		return (
 			<div id="app-container" className="flex ">
 				<SideBar />
-				<div id="cv-outer-body-container" className="min-h-[800px] flex flex-1 justify-center px-16 py-12">
+				<div
+					id="cv-outer-body-container"
+					className="min-h-[800px] flex flex-1 justify-center px-16 py-12"
+				>
 					<CVbody />
 				</div>
 			</div>

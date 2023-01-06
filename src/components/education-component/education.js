@@ -20,9 +20,9 @@ class Education extends React.Component {
 					<h3 className="school-name">{schoolName}</h3>
 					<p className="school-desc">{schoolDescription}</p>
 				</div>
-				<button onClick={this.props.removeEducation} type="button">
+				{/* <button onClick={this.props.removeEducation} type="button">
 					Remove Education
-				</button>
+				</button> */}
 			</div>
 		);
 	}

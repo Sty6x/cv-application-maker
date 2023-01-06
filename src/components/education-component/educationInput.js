@@ -25,12 +25,12 @@ class EducationInput extends React.Component {
 						id="school-location-input"
 					/>
 				</div>
-				<div id="school-desc-input-container">
-					<label htmlFor="school-desc-input">Description:</label>
+				<div id="school-course-input-container">
+					<label htmlFor="school-course-input">Course:</label>
 					<input
 						onChange={inputHandler}
-						name="school-desc-input"
-						id="school-desc-input"
+						name="school-course-input"
+						id="school-course-input"
 					/>
 				</div>
 				<div id="school-grad-date-input-container">
