@@ -12,7 +12,7 @@ class SideBar extends React.Component{
 
     render(){
         return(
-            <div className="overflow-y text-white bg-[#2E3440] px-5 py-3 flex flex-col gap-y-10" id="sidebar-container">
+            <div className="overflow-y-scroll h-screen text-white bg-[#2E3440] px-5 py-3 flex flex-col gap-y-10" id="sidebar-container">
                 <PersonalInfoInput/>
                 <IntroductionInput/>
                 <ExperienceInput/>

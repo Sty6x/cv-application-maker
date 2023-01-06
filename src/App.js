@@ -280,7 +280,7 @@ class App extends React.Component {
 				<SideBar />
 				<div
 					id="cv-outer-body-container"
-					className="flex flex-1 justify-center px-16 py-12"
+					className="flex flex-1 justify-center px-16 pt-[2px]"
 				>
 					<CVbody />
 				</div>

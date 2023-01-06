@@ -31,8 +31,11 @@
 	font-weight: 600;
 }
 
+body,html{
+	overflow: hidden;
+}
 body {
-	height: 100vh;
+	min-height: 100vh;
 	font-family: "poppins";
 }
 input {
@@ -133,7 +136,7 @@ input {
 	appearance: none;
 	-webkit-appearance: none;
 	outline: none;
-	padding: 0px 3px;
+	padding: 3px 6px;
 	color: black;
 	width: 100%;
 }
@@ -141,3 +144,17 @@ input {
 textarea {
 	height: 10em;
 }
+
+#sidebar-container::-webkit-scrollbar{
+	background-color: #D8DEE9;
+	width: 5px;
+  }
+  #sidebar-container::-webkit-scrollbar-thumb{
+	background-color: #81A1C1;
+  }
+  
+  #sidebar-container::-webkit-scrollbar-button{
+  
+	background-color: rgb(0, 0, 0,0);
+	appearance: none;
+  }
