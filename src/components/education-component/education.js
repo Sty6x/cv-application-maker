@@ -8,7 +8,7 @@ class Education extends React.Component {
 	render() {
         const {graduationYear,course,schoolLocation,schoolName} = this.props.schoolInfo;
 		return (
-			<div id={this.props.ID} className="education-container">
+			<div id={this.props.ID} className="education-container max-h-[200px]">
 				<div className="school-location-date">
 					<p className="school-year">{graduationYear}</p>
 					<p className="school-location">{schoolLocation}</p>

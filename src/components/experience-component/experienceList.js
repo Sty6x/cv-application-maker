@@ -45,7 +45,7 @@ class ExperienceList extends React.Component {
 			);
 		});
 		return (
-			<div id="outer-experience-container">
+			<div id="outer-experience-container" className="max-h-[310px]">
 				<h3 className="main-titles">Experience</h3>
 				<div id="experience-list-container">{displayExperience}</div>
 			</div>

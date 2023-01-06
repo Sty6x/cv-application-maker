@@ -112,3 +112,12 @@ h3.side-titles::after {
 .job-title-company,.school-name{
 	font-weight: 600;
 }
+
+#outer-experience-container,
+#outer-education-container,#introduction-container{
+	margin-bottom: 12px;
+}
+.job-location,.school-location{
+	text-transform: uppercase;
+	font-weight: 500;
+}

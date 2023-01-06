@@ -7,18 +7,21 @@ class Introduction extends React.Component {
 
 	render() {
 		return (
-			<div id="introduction-container">
+			<div id="introduction-container" className="h-[210px]">
 				<h3 className="main-titles">Introduction</h3>
-				<p>
+{/* <p className="indent-5">
 					Lorem6 ipsum odor amet, consectetuer adipiscing elit. Vitae hendrerit aenean euismod bibendum
 					fau100cibus aliquet cras risus nibh conubia rutrum elementum luctus; gravida ultricies
 					ullamcorper vest200ibulum potenti massa conubia. Dictum magna curabitur gravida nisi curae
 					nascetur ut feugiat volut300pat cubilia ultrices rhoncus hac gravida adipiscing habitant.
-				
+				</p> */}
+				<p className="indent-5">
+					Lorem6 ipsum odor amet, consectetuer adipiscing elit. Vitae hendrerit aenean euismod bibendum
+					fau100cibus aliquet cras risus nibh conubia rutrum elementum luctus; gravida ultricies
 				</p>
 			</div>
 		);
 	}
 }
 
-export default Introduction
+export default Introduction;
