@@ -13,7 +13,7 @@ class ExperienceList extends React.Component {
 				endDate: 2022,
 				jobLocation: "Dubai",
 				jobTitle: "Pc Maintenance",
-				jobDescription: "a little bit of this, and a little bit of that",
+				jobDescription: "a little f this, and a little bit of that",
 			},
 			{
 				startDate: 2019,
@@ -21,7 +21,7 @@ class ExperienceList extends React.Component {
 				endDate: 2022,
 				jobLocation: "Dubai",
 				jobTitle: "Pc Maintenance",
-				jobDescription: "a little bit of this, and a little bit of that",
+				jobDescription: "ae bit of that",
 			},
 			{
 				startDate: 2019,
@@ -29,7 +29,7 @@ class ExperienceList extends React.Component {
 				endDate: 2022,
 				jobLocation: "Dubai",
 				jobTitle: "Pc Maintenance",
-				jobDescription: "a little bit of this, and a little bit of that",
+				jobDescription: "a little bit of ttle bit of that",
 			},
 		];
 		let key = this.props.expKey;

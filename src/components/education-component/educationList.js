@@ -15,7 +15,7 @@ class EducationList extends React.Component {
 			},
 
 			{
-				schoolName: "nohs",
+				schoolName: "NOHS",
 				graduationYear: "2019",
 				schoolLocation: "bacolod",
 				course: "STEM",

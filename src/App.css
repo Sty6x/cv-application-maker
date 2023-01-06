@@ -77,7 +77,7 @@ h3.side-titles::after {
 	font-weight: 600;
 	font-size: 1.3rem;
 	position: relative;
-	margin-bottom: 10px;
+	margin-bottom: 15px;
 }
 .main-titles::after {
 	content: "";
@@ -86,4 +86,16 @@ h3.side-titles::after {
 	background-color: #4c566a;
 	display: block;
 	position: absolute;
+}
+
+.job-title-desc,
+.school-name-desc {
+	width: 70%;
+}
+
+#experience-list-container,
+#education-list-container {
+display: flex;
+flex-direction: column;
+gap: 15px;
 }

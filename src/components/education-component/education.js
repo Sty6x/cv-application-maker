@@ -13,7 +13,7 @@ class Education extends React.Component {
 					<p className="school-year">{graduationYear}</p>
 					<p className="school-location">{schoolLocation}</p>
 				</div>
-				<div className="school-name-desc">
+				<div className="school-name-desc ">
 					<h3 className="school-name">{schoolName}</h3>
 					<p className="school-course">{course}</p>
 				</div>
