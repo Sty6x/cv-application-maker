@@ -40,9 +40,12 @@ input {
 	display: block;
 }
 
-button {
-	background-color: #282c34;
+button[type="button"] {
+	background-color: aliceblue;
 	border: #282c34 solid 1px;
+	color: #282c34;
+	padding: 3px 5px;
+	margin-top: 10px;
 }
 
 h3.side-titles {
@@ -103,21 +106,38 @@ h3.side-titles::after {
 .school-location-date,
 .school-name-course,
 .job-location-date,
-.job-title-desc{
+.job-title-desc {
 	display: flex;
 	flex-direction: column;
 	gap: 5px;
 }
 
-.job-title-company,.school-name{
+.job-title-company,
+.school-name {
 	font-weight: 600;
 }
 
 #outer-experience-container,
-#outer-education-container,#introduction-container{
+#outer-education-container,
+#introduction-container {
 	margin-bottom: 12px;
 }
-.job-location,.school-location{
+.job-location,
+.school-location {
 	text-transform: uppercase;
 	font-weight: 500;
+}
+
+textarea,
+input {
+	appearance: none;
+	-webkit-appearance: none;
+	outline: none;
+	padding: 0px 3px;
+	color: black;
+	width: 100%;
+}
+
+textarea {
+	height: 10em;
 }
