@@ -1,4 +1,5 @@
 import React from "react";
+import Introduction from "../../introduction-component/introduction";
 import EducationList from "../education-component/educationList";
 import ExperienceList from "../experience-component/experienceList";
 
@@ -10,9 +11,9 @@ class CVmain extends React.Component {
 	render() {
 		return (
 			<div id="cv-main-container" className="bg-[#ebf0f8] min-h-[800px]">
-                {/* make an introduction Component */}
-				{/* <ExperienceList/> */}
-				{/* <EducationList/> */}
+				<Introduction/>
+				 <ExperienceList/> 
+				 {/* <EducationList/>  */}
 			</div>
 		);
 	}

@@ -12,7 +12,7 @@ class SideBar extends React.Component{
 
     render(){
         return(
-            <div className="max-h-full" id="sidebar-container">
+            <div className="text-white bg-[#2E3440] max-h-full" id="sidebar-container">
                 <PersonalInfoInput/>
                 <IntroductionInput/>
                 <ExperienceInput/>

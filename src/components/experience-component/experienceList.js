@@ -6,7 +6,10 @@ class ExperienceList extends React.Component {
 	}
 
 	render() {
-		const experiences = this.props.experienceList;
+		const experiences = [
+			{ startDate: 2019, endDate: 2022, jobLocation: "Dubai", jobTitle: "Pc Maintenance" },
+			{ startDate: 2019, endDate: 2022, jobLocation: "Dubai", jobTitle: "Pc Maintenance" },
+		];
 		let key = this.props.expKey;
 		let ID = this.props.expID;
 		const displayExperience = experiences.map((experience) => {

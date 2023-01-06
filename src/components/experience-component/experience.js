@@ -15,7 +15,7 @@ class Experience extends React.Component{
                     <h3 className="job-title">{jobTitle}</h3>
                     <p className="job-desc">{jobDescription}</p>
                 </div>
-                <button onClick={this.props.removeExperience} type="button">Remove Experience</button>
+                {/* <button onClick={this.props.removeExperience} type="button">Remove Experience</button> */}
             </div>
         )
     }
