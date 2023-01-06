@@ -44,6 +44,7 @@ class App extends React.Component {
 				photo: "",
 			},
 			personalInfo: {},
+			introduction:""
 		};
 		this.handleSkillInput = this.handleSkillInput.bind(this);
 		this.addSkill = this.addSkill.bind(this);
