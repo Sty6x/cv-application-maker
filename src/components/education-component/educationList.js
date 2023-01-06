@@ -11,14 +11,14 @@ class EducationList extends React.Component {
 				schoolName: "University of St.La salle",
 				graduationYear: "2020",
 				schoolLocation: "bacolod",
-				course: "stem",
+				course: "Computer Science",
 			},
 
 			{
 				schoolName: "nohs",
 				graduationYear: "2019",
 				schoolLocation: "bacolod",
-				course: "stem",
+				course: "STEM",
 			},
 		];
 		const { educKey, educID } = this.props;
