@@ -9,7 +9,7 @@ class Education extends React.Component {
         const {graduationYear,course,schoolLocation,schoolName} = this.props.schoolInfo;
 		return (
 			<div id={this.props.ID} className="education-container">
-				<div className="education-location-date">
+				<div className="school-location-date">
 					<p className="school-year">{graduationYear}</p>
 					<p className="school-location">{schoolLocation}</p>
 				</div>

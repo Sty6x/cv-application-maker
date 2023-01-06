@@ -36,7 +36,7 @@ class EducationList extends React.Component {
 		});
 
 		return (
-			<div id="education-container">
+			<div id="outer-education-container">
 				<h3 className="main-titles">Education</h3>
 				<div id="education-list-container">{displayEducation}</div>
 			</div>
