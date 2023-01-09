@@ -1,5 +1,6 @@
 {
-  "name": "cv-applicatian-maker",
+  "name": "cv-application-maker",
+  "hompage":"http://sty6x.github.io/cv-application-maker"
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -37,6 +38,7 @@
     ]
   },
   "devDependencies": {
+    "gh-pages": "^4.0.0",
     "html-loader": "^4.2.0",
     "tailwindcss": "^3.2.4"
   }
