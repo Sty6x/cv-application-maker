@@ -9,7 +9,7 @@ class App extends React.Component {
 		this.state = {
 			skills: [],
 			achievements: [],
-			achievementInput:"",
+			achievementInput: "",
 			skillInput: "",
 			expKey: 0,
 			expID: 0,
@@ -299,10 +299,13 @@ class App extends React.Component {
 	}
 
 	addIntroduction() {
-		this.setState({
-			introduction: this.state.introInput,
-			inroInput: "",
-		},()=>console.log(this.state));
+		this.setState(
+			{
+				introduction: this.state.introInput,
+				inroInput: "",
+			},
+			() => console.log(this.state)
+		);
 	}
 
 	// remove the other function
@@ -327,24 +330,26 @@ class App extends React.Component {
 				<SideBar
 					addEducation={this.addEducation}
 					handleEducationInput={this.handleEducationInput}
-
 					addExperience={this.addExperience}
 					handleExperienceInput={this.handleExperienceInput}
-
 					addPersonalInfo={this.addPersonalInfo}
 					handlePersonalInfoInput={this.handlePersonalInfoInput}
-
 					addSkill={this.addSkill}
 					handleSkillInput={this.handleSkillInput}
-
 					addIntroduction={this.addIntroduction}
 					handleIntroductionInput={this.handleIntroductionInput}
-					
 					addAchievements={this.addAchievements}
 					handleAchievementsInput={this.handleAchievementsInput}
 				/>
 				<div id="cv-outer-body-container" className="flex flex-1 justify-center px-16 pt-[2px]">
-					<CVbody />
+					<CVbody
+						personalInfo={personalInfo}
+						introduction={introduction}
+						experience={experience}
+						education={education}
+						skill={skills}
+						achievements = {achievements}
+					/>
 				</div>
 			</div>
 		);
