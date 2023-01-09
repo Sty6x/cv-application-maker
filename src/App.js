@@ -269,7 +269,7 @@ class App extends React.Component {
 		this.setState({});
 	}
 	render() {
-		const {personalInfo, introduction, experience,education,skills,achievements} = this.props.state
+		const {personalInfo, introduction, experience,education,skills,achievements} = this.state
 		return (
 			<div id="app-container" className="flex ">
 				<SideBar />

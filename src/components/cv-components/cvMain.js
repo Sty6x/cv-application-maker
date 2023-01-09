@@ -1,5 +1,5 @@
 import React from "react";
-import Introduction from "../../introduction-component/introduction";
+import Introduction from "../introduction-component/introduction";
 import EducationList from "../education-component/educationList";
 import ExperienceList from "../experience-component/experienceList";
 

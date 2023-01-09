@@ -1,8 +1,8 @@
 import React from "react";
-import IntroductionInput from "../../introduction-component/introductionInput";
 import AchievementInput from "../achievements-component/achievementsInput";
 import EducationInput from "../education-component/educationInput";
 import ExperienceInput from "../experience-component/experienceInput";
+import IntroductionInput from "../introduction-component/introductionInput";
 import PersonalInfoInput from "../personalInfo-component/personalInfoInput";
 import SkillInput from "../skill-component/skillInput";
 
