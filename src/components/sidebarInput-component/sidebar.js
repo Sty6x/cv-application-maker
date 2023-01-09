@@ -18,9 +18,11 @@ class SideBar extends React.Component {
 			addPersonalInfo,
 			handlePersonalInfoInput,
 			addSkill,
+            handleSkillInput,
 			addExperience,
             handleExperienceInput,
 			addAchievements,
+            handleAchivementsInput,
 			addIntroduction,
             handleIntroductionInput
 		} = this.props;
@@ -33,8 +35,8 @@ class SideBar extends React.Component {
 				<IntroductionInput inputHandler={handleIntroductionInput} addIntroduction={addIntroduction}/>
 				<ExperienceInput inputHandler={handleExperienceInput} addExperience={addExperience}/>
 				<EducationInput inputHandler={handleEducationInput} addEducation={addEducation} />
-				<SkillInput />
-				<AchievementInput />
+				<SkillInput inputHandler={handleSkillInput} addSkill={addSkill}/>
+				<AchievementInput inputHandler={handleAchivementsInput} addAchievements={addAchievements}/>
 			</div>
 		);
 	}

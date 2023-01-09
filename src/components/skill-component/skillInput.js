@@ -6,11 +6,11 @@ class SkillInput extends React.Component {
 	}
 
 	render() {
-        const {handleSkillInput,addSkill} =this.props
+        const {inputHandler,addSkill} =this.props
 		return (
 			<div id="skill-input-container">
 				<input
-					onChange={handleSkillInput}
+					onChange={inputHandler}
 					className="border-[2px] border-solid border-zinc-700"
 					type="text"
 				/>
