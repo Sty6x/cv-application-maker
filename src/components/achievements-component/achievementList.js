@@ -1,5 +1,6 @@
 import React from "react"
 import Achievement from "./achievement"
+import { v4 } from "uuid"
 
 class AchievementList extends React.Component{
     constructor(props){
@@ -8,7 +9,7 @@ class AchievementList extends React.Component{
     render(){
         const achievements = this.props.achievements
         let displayAchievements = achievements.map(achievement=>{
-           return <Achievement achievement={achievement} />
+           return <Achievement key={v4()} achievement={achievement} />
         })
         return(
             <ul className="flex flex-col text-white"  id="skill-list">

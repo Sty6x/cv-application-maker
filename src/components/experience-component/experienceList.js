@@ -1,4 +1,5 @@
 import React from "react";
+import { v4 } from "uuid";
 import Experience from "./experience";
 class ExperienceList extends React.Component {
 	constructor(props) {
@@ -15,7 +16,7 @@ class ExperienceList extends React.Component {
 				<Experience
 					removeExperience={this.props.removeExpHandler}
 					ID={ID++}
-					key={key++}
+					key={v4()}
 					experience={experience}
 				/>
 			);

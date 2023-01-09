@@ -2,6 +2,7 @@ import "./App.css";
 import React from "react";
 import CVbody from "./components/cv-components/cvBody";
 import SideBar from "./components/sidebarInput-component/sidebar";
+import { v4 } from "uuid";
 
 class App extends React.Component {
 	constructor(props) {

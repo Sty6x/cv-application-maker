@@ -1,4 +1,5 @@
 import React from "react";
+import { v4 } from "uuid";
 import Education from "./education";
 class EducationList extends React.Component {
 	constructor(props) {
@@ -7,15 +8,14 @@ class EducationList extends React.Component {
 
 	render() {
 		
-		const { educKey, educID } = this.props;
-		let key = educKey;
+		const { educID } = this.props;
 		let ID = educID;
 		const educations = this.props.educations
 		const displayEducation = educations.map((education) => {
 			return (
 				<Education
 					ID={ID++}
-					key={key++}
+					key={v4()}
 					removeEducation={this.props.removeEducHandler}
 					schoolInfo={education}
 				/>

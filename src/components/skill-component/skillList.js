@@ -1,4 +1,5 @@
 import React from "react";
+import { v4 } from "uuid";
 import Skill from "./skill";
 class SkillList extends React.Component {
 	constructor(props) {
@@ -7,7 +8,7 @@ class SkillList extends React.Component {
 	render() {
 		const skills = this.props.skills;
 		let displaySkills = skills.map((skill) => {
-			return <Skill skill={skill} />;
+			return <Skill key={v4()} skill={skill} />;
 		});
 		return (
 			<ul className="flex flex-col text-white" id="skill-list">

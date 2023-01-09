@@ -9,9 +9,9 @@ class Experience extends React.Component{
             <div id={this.props.ID} className="experience-container">
                 <div className="job-location-date">
                     <p>{startDate}-{endDate}</p>
-                    <p className="job-location">{jobLocation}</p>
+                    <p className="w-full job-location">{jobLocation}</p>
                 </div>
-                <div className="text-right job-title-desc">
+                <div className="min-w-[70%]  job-title-desc">
                     <h3 className="job-title-company">{companyName}, <span>{jobTitle}</span></h3>
                     <p className="job-desc ">{jobDescription}</p>
                 </div>
