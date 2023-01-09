@@ -1,12 +1,5 @@
 import "./App.css";
 import React from "react";
-import SkillList from "./components/skill-component/skillList";
-import ExperienceInput from "./components/experience-component/experienceInput";
-import ExperienceList from "./components/experience-component/experienceList";
-import SkillInput from "./components/skill-component/skillInput";
-import EducationInput from "./components/education-component/educationInput";
-import EducationList from "./components/education-component/educationList";
-import PersonalInfoInput from "./components/personalInfo-component/personalInfoInput";
 import CVbody from "./components/cv-components/cvBody";
 import SideBar from "./components/sidebarInput-component/sidebar";
 
@@ -15,6 +8,7 @@ class App extends React.Component {
 		super(props);
 		this.state = {
 			skills: [],
+			achievements:[],
 			input: "",
 			expKey: 0,
 			expID: 0,
@@ -275,6 +269,7 @@ class App extends React.Component {
 		this.setState({});
 	}
 	render() {
+		const {personalInfo, introduction, experience,education,skills,achievements} = this.props.state
 		return (
 			<div id="app-container" className="flex ">
 				<SideBar />
