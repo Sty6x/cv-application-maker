@@ -11,9 +11,9 @@ class CVmain extends React.Component {
 	render() {
 		return (
 			<div id="cv-main-container" className="min-h-[900px] px-7 py-3  bg-[#ebf0f8]">
-				<Introduction />
-				<ExperienceList />
-				<EducationList />
+				<Introduction intro={this.props.introduction}/>
+				<ExperienceList experiences = {this.props.experience} />
+				<EducationList educations={this.props.education}/>
 			</div>
 		);
 	}
