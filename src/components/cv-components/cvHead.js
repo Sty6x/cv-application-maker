@@ -11,7 +11,7 @@ class CVhead extends React.Component {
 				id="head-container"
 				className="px-10 py-3 h-[100px] text-white bg-[#4C566A] flex flex-col justify-center items-center text-center"
 			>
-				<PersonalInfoHeader />
+				<PersonalInfoHeader name={this.props.persInfoName} job={this.props.persInfoJobTitle}/>
 			</div>
 		);
 	}

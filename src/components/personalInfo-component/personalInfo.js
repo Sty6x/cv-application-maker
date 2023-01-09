@@ -8,17 +8,18 @@ class PersonalInfo extends React.Component{
     }
     
     render(){
+        const {emailAddress, phoneNumber,address} = this.props.persInfo
         return(
             <div id="personal-info-container" className="flex flex-col text-white">
                 <h3 className="side-titles">Personal Information:</h3>
                 <div id="email-address">
-                    <p>Jerylfranz@gmail.com</p>
+                    <p>{emailAddress}</p>
                 </div> 
                 <div id="phone-number">
-                    <p>09284719828</p>
+                    <p>{phoneNumber}</p>
                 </div> 
                 <div id="address">
-                    <p>Dubai, Al rigga</p>
+                    <p>{address}</p>
                 </div> 
             </div>
         )
