@@ -6,7 +6,7 @@ class PersonalInfoInput extends React.Component {
 	}
 
 	render() {
-		const inputHandler = this.props.inputHandler;
+		const inputHandler = this.props.addPersonalInfo;
 		return (
 			<div id="personal-info-input-container">
 				<div id="name-input-cont">

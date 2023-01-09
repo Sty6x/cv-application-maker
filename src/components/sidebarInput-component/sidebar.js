@@ -12,9 +12,10 @@ class SideBar extends React.Component{
     }
 
     render(){
+        const {addEducation,addPersonalInfo, addSkill, addExperience,addAchievements,addIntroduction} = this.props
         return(
             <div className="overflow-y-scroll h-screen text-white bg-[#2E3440] px-5 py-3 flex flex-col gap-y-10" id="sidebar-container">
-                <PersonalInfoInput/>
+                <PersonalInfoInput addPersonalInfo={addPersonalInfo}/>
                 <IntroductionInput/>
                 <ExperienceInput/>
                 <EducationInput/>

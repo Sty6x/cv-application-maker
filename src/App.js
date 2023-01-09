@@ -60,6 +60,13 @@ class App extends React.Component {
 			input: e.target.value,
 		});
 	}
+	handleAchievementsInput(e) {
+		this.setState({
+			input: e.target.value,
+		});
+	}
+
+
 
 	handlePersonalInfoInput(e) {
 		switch (e.target.id) {
@@ -211,12 +218,12 @@ class App extends React.Component {
 	}
 	// need to remove value for each input filled that is added
 	addSkill(e) {
-		if (e.target.value === "") {
+		if (this.state.input === "") {
 			return;
 		} else {
 			this.setState(
 				{
-					skills: this.state.skills.concat(e.target.value),
+					skills: this.state.skills.concat(this.state.input),
 				},
 				() => {
 					console.log(this.state);
@@ -225,13 +232,13 @@ class App extends React.Component {
 		}
 	}
 
-	addAchievements(e) {
-		if (e.target.value === "") {
+addAchievements(e) {
+		if (this.state.input === "") {
 			return;
 		} else {
 			this.setState(
 				{
-					achievements: this.state.achievements.concat(e.target.value),
+					skills: this.state.skills.concat(this.state.input),
 				},
 				() => {
 					console.log(this.state);
@@ -296,11 +303,16 @@ class App extends React.Component {
 			<div id="app-container" className="flex ">
 				<SideBar
 					addEducation={this.addEducation}
+					handleEducationInput = {this.handleEducationInput}
 					addExperience={this.addExperience}
+					handleExperienceInput = {this.handleExperienceInput}
 					addPersonalInfo={this.addPersonalInfo}
+					handlePersonalInfoInput ={this.handlePersonalInfoInput}
 					addSkill={this.addSkill}
+					handleSkillInput = {this.handleSkillInput}
 					addIntroduction={this.addIntroduction}
 					addAchievements={this.addAchievements}
+					handleAchievementsInput = {this.handleAchievementsInput}
 				/>
 				<div id="cv-outer-body-container" className="flex flex-1 justify-center px-16 pt-[2px]">
 					<CVbody />
