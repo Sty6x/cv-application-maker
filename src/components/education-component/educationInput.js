@@ -6,7 +6,7 @@ class EducationInput extends React.Component {
 	}
 	render() {
         const inputHandler = this.props.inputHandler;
-        const addEducHandler = this.props.addEducationHandler;
+        const  addEducation= this.props.addEducation;
 		return (
 			<div id="education-input-field">
 				<div id="education-input-container">
@@ -42,7 +42,7 @@ class EducationInput extends React.Component {
 					/>
 				</div>
 
-				<button onClick={addEducHandler} type="button">
+				<button onClick={addEducation} type="button">
 					Add Education 
 				</button>
 			</div>

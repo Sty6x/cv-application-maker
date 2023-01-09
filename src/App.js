@@ -40,6 +40,7 @@ class App extends React.Component {
 			},
 			personalInfo: {},
 			introduction: "",
+			introInput: "",
 		};
 		this.handleSkillInput = this.handleSkillInput.bind(this);
 		this.addSkill = this.addSkill.bind(this);
@@ -52,7 +53,9 @@ class App extends React.Component {
 		this.handlePersonalInfoInput = this.handlePersonalInfoInput.bind(this);
 		this.addPersonalInfo = this.addPersonalInfo.bind(this);
 		this.addAchievements = this.addAchievements.bind(this);
+		this.handleAchievementsInput =this.handleAchievementsInput.bind(this);
 		this.addIntroduction = this.addAchievements.bind(this);
+		this.handleIntroductionInput = this.handleIntroductionInput.bind(this);
 	}
 
 	handleSkillInput(e) {
@@ -66,7 +69,11 @@ class App extends React.Component {
 		});
 	}
 
-
+	handleIntroductionInput(e){
+		this.setState({
+			introInput: e.target.value
+		})
+	}
 
 	handlePersonalInfoInput(e) {
 		switch (e.target.id) {
@@ -232,7 +239,7 @@ class App extends React.Component {
 		}
 	}
 
-addAchievements(e) {
+	addAchievements(e) {
 		if (this.state.input === "") {
 			return;
 		} else {
@@ -251,6 +258,14 @@ addAchievements(e) {
 		this.setState(
 			{
 				experience: this.state.experience.concat(this.state.userExperienceInput),
+				userExperienceInput: {
+					jobTitle: "",
+					companyName: "",
+					startDate: "",
+					endDate: "",
+					jobLocation: "",
+					jobDescription: "",
+				},
 			},
 			() => console.log(this.state)
 		);
@@ -260,6 +275,12 @@ addAchievements(e) {
 		this.setState(
 			{
 				education: this.state.education.concat(this.state.userEducationInput),
+				userEducationInput: {
+					schoolName: "",
+					graduationYear: "",
+					schoolLocation: "",
+					course: "",
+				},
 			},
 			() => console.log(this.state)
 		);
@@ -276,10 +297,11 @@ addAchievements(e) {
 		);
 	}
 
-	addIntroduction(e){
+	addIntroduction() {
 		this.setState({
-			introduction: e.target.value
-		})
+			introduction: this.state.introInput,
+			inroInput :"",
+		});
 	}
 
 	// remove the other function
@@ -303,16 +325,17 @@ addAchievements(e) {
 			<div id="app-container" className="flex ">
 				<SideBar
 					addEducation={this.addEducation}
-					handleEducationInput = {this.handleEducationInput}
+					handleEducationInput={this.handleEducationInput}
 					addExperience={this.addExperience}
-					handleExperienceInput = {this.handleExperienceInput}
+					handleExperienceInput={this.handleExperienceInput}
 					addPersonalInfo={this.addPersonalInfo}
-					handlePersonalInfoInput ={this.handlePersonalInfoInput}
+					handlePersonalInfoInput={this.handlePersonalInfoInput}
 					addSkill={this.addSkill}
-					handleSkillInput = {this.handleSkillInput}
+					handleSkillInput={this.handleSkillInput}
 					addIntroduction={this.addIntroduction}
+					handleIntroductionInput={this.handleIntroductionInput}
 					addAchievements={this.addAchievements}
-					handleAchievementsInput = {this.handleAchievementsInput}
+					handleAchievementsInput={this.handleAchievementsInput}
 				/>
 				<div id="cv-outer-body-container" className="flex flex-1 justify-center px-16 pt-[2px]">
 					<CVbody />
