@@ -6,7 +6,8 @@ class PersonalInfoInput extends React.Component {
 	}
 
 	render() {
-		const inputHandler = this.props.addPersonalInfo;
+		const inputHandler = this.props.inputHandler;
+		const addPersonalInfo = this.props.addPersonalInfo
 		return (
 			<div id="personal-info-input-container">
 				<div id="name-input-cont">
@@ -38,7 +39,7 @@ class PersonalInfoInput extends React.Component {
 					<label htmlFor="phone-input">Phone Number:</label>
 					<input onChange={inputHandler} type="number" id="phone-input" />
 				</div>
-				<button type="button" onClick={this.props.addPersonalInfo}> Add Info</button>
+				<button type="button" onClick={addPersonalInfo}> Add Info</button>
 			</div>
 		);
 	}
