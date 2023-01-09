@@ -9,7 +9,8 @@ class App extends React.Component {
 		this.state = {
 			skills: [],
 			achievements: [],
-			input: "",
+			achievementInput:"",
+			skillInput: "",
 			expKey: 0,
 			expID: 0,
 			experience: [],
@@ -60,12 +61,12 @@ class App extends React.Component {
 
 	handleSkillInput(e) {
 		this.setState({
-			input: e.target.value,
+			skillInput: e.target.value,
 		});
 	}
 	handleAchievementsInput(e) {
 		this.setState({
-			input: e.target.value,
+			achievementInput: e.target.value,
 		});
 	}
 
@@ -225,12 +226,12 @@ class App extends React.Component {
 	}
 	// need to remove value for each input filled that is added
 	addSkill(e) {
-		if (this.state.input === "") {
+		if (this.state.skillInput === "") {
 			return;
 		} else {
 			this.setState(
 				{
-					skills: this.state.skills.concat(this.state.input),
+					skills: this.state.skills.concat(this.state.skillInput),
 				},
 				() => {
 					console.log(this.state);
@@ -240,12 +241,12 @@ class App extends React.Component {
 	}
 
 	addAchievements(e) {
-		if (this.state.input === "") {
+		if (this.state.achievementInput === "") {
 			return;
 		} else {
 			this.setState(
 				{
-					skills: this.state.skills.concat(this.state.input),
+					achievements: this.state.achievements.concat(this.state.achievementInput),
 				},
 				() => {
 					console.log(this.state);

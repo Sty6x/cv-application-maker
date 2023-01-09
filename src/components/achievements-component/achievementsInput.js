@@ -6,15 +6,15 @@ class AchievementInput extends React.Component {
 	}
 
 	render() {
-        const {handleAchievementInput,addAchievement} =this.props
+        const {inputHandler,addAchievements} =this.props
 		return (
 			<div id="skill-input-container">
 				<input
-					onChange={handleAchievementInput}
+					onChange={inputHandler}
 					className="border-[2px] border-solid border-zinc-700"
 					type="text"
 				/>
-				<button onClick={addAchievement} type="button">
+				<button onClick={addAchievements} type="button">
 					Add Achievement 
 				</button>
 			</div>
