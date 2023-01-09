@@ -6,7 +6,7 @@ class Achievement extends React.Component{
     }
     render(){
         return(
-            <li>{this.props.achievement}</li>
+            <li>• {this.props.achievement}</li>
         )
     }
 }
