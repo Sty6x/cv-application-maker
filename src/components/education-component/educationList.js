@@ -6,24 +6,11 @@ class EducationList extends React.Component {
 	}
 
 	render() {
-		const educations = [
-			{
-				schoolName: "University of St.La salle",
-				graduationYear: "2020",
-				schoolLocation: "bacolod",
-				course: "Computer Science",
-			},
-
-			{
-				schoolName: "NOHS",
-				graduationYear: "2019",
-				schoolLocation: "bacolod",
-				course: "STEM",
-			},
-		];
+		
 		const { educKey, educID } = this.props;
 		let key = educKey;
 		let ID = educID;
+		const educations = this.props.educations
 		const displayEducation = educations.map((education) => {
 			return (
 				<Education
