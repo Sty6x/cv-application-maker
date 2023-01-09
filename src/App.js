@@ -347,7 +347,7 @@ class App extends React.Component {
 						introduction={introduction}
 						experience={experience}
 						education={education}
-						skill={skills}
+						skills={skills}
 						achievements = {achievements}
 					/>
 				</div>
