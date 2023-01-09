@@ -53,8 +53,8 @@ class App extends React.Component {
 		this.handlePersonalInfoInput = this.handlePersonalInfoInput.bind(this);
 		this.addPersonalInfo = this.addPersonalInfo.bind(this);
 		this.addAchievements = this.addAchievements.bind(this);
-		this.handleAchievementsInput =this.handleAchievementsInput.bind(this);
-		this.addIntroduction = this.addAchievements.bind(this);
+		this.handleAchievementsInput = this.handleAchievementsInput.bind(this);
+		this.addIntroduction = this.addIntroduction.bind(this);
 		this.handleIntroductionInput = this.handleIntroductionInput.bind(this);
 	}
 
@@ -69,10 +69,10 @@ class App extends React.Component {
 		});
 	}
 
-	handleIntroductionInput(e){
+	handleIntroductionInput(e) {
 		this.setState({
-			introInput: e.target.value
-		})
+			introInput: e.target.value,
+		});
 	}
 
 	handlePersonalInfoInput(e) {
@@ -300,8 +300,8 @@ class App extends React.Component {
 	addIntroduction() {
 		this.setState({
 			introduction: this.state.introInput,
-			inroInput :"",
-		});
+			inroInput: "",
+		},()=>console.log(this.state));
 	}
 
 	// remove the other function
@@ -326,14 +326,19 @@ class App extends React.Component {
 				<SideBar
 					addEducation={this.addEducation}
 					handleEducationInput={this.handleEducationInput}
+
 					addExperience={this.addExperience}
 					handleExperienceInput={this.handleExperienceInput}
+
 					addPersonalInfo={this.addPersonalInfo}
 					handlePersonalInfoInput={this.handlePersonalInfoInput}
+
 					addSkill={this.addSkill}
 					handleSkillInput={this.handleSkillInput}
+
 					addIntroduction={this.addIntroduction}
 					handleIntroductionInput={this.handleIntroductionInput}
+					
 					addAchievements={this.addAchievements}
 					handleAchievementsInput={this.handleAchievementsInput}
 				/>
