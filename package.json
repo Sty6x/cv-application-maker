@@ -1,6 +1,6 @@
 {
   "name": "cv-application-maker",
-  "hompage": "http://sty6x.github.io/cv-application-maker",
+  "homepage": "http://sty6x.github.io/cv-application-maker",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
