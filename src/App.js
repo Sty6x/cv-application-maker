@@ -8,7 +8,7 @@ class App extends React.Component {
 		super(props);
 		this.state = {
 			skills: [],
-			achievements:[],
+			achievements: [],
 			input: "",
 			expKey: 0,
 			expID: 0,
@@ -51,6 +51,8 @@ class App extends React.Component {
 		this.removeEducation = this.removeEducation.bind(this);
 		this.handlePersonalInfoInput = this.handlePersonalInfoInput.bind(this);
 		this.addPersonalInfo = this.addPersonalInfo.bind(this);
+		this.addAchievements = this.addAchievements.bind(this);
+		this.addIntroduction = this.addAchievements.bind(this);
 	}
 
 	handleSkillInput(e) {
@@ -208,14 +210,28 @@ class App extends React.Component {
 		}
 	}
 	// need to remove value for each input filled that is added
-	addSkill() {
-		if (this.state.input === "") {
+	addSkill(e) {
+		if (e.target.value === "") {
 			return;
 		} else {
 			this.setState(
 				{
-					skills: this.state.skills.concat(this.state.input),
-					input: "",
+					skills: this.state.skills.concat(e.target.value),
+				},
+				() => {
+					console.log(this.state);
+				}
+			);
+		}
+	}
+
+	addAchievements(e) {
+		if (e.target.value === "") {
+			return;
+		} else {
+			this.setState(
+				{
+					achievements: this.state.achievements.concat(e.target.value),
 				},
 				() => {
 					console.log(this.state);
@@ -253,6 +269,12 @@ class App extends React.Component {
 		);
 	}
 
+	addIntroduction(e){
+		this.setState({
+			introduction: e.target.value
+		})
+	}
+
 	// remove the other function
 	removeExperience(e) {
 		const experienceIndex = e.target.parentNode.id;
@@ -269,14 +291,18 @@ class App extends React.Component {
 		this.setState({});
 	}
 	render() {
-		const {personalInfo, introduction, experience,education,skills,achievements} = this.state
+		const { personalInfo, introduction, experience, education, skills, achievements } = this.state;
 		return (
 			<div id="app-container" className="flex ">
-				<SideBar />
-				<div
-					id="cv-outer-body-container"
-					className="flex flex-1 justify-center px-16 pt-[2px]"
-				>
+				<SideBar
+					addEducation={this.addEducation}
+					addExperience={this.addExperience}
+					addPersonalInfo={this.addPersonalInfo}
+					addSkill={this.addSkill}
+					addIntroduction={this.addIntroduction}
+					addAchievements={this.addAchievements}
+				/>
+				<div id="cv-outer-body-container" className="flex flex-1 justify-center px-16 pt-[2px]">
 					<CVbody />
 				</div>
 			</div>
