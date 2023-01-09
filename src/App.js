@@ -38,7 +38,7 @@ class App extends React.Component {
 				phoneNumber: "",
 				emailAddress: "",
 				address: "",
-				photo: "",
+				photo: [],
 			},
 			personalInfo: {},
 			introduction: "",
@@ -100,7 +100,7 @@ class App extends React.Component {
 					{
 						userPersonalInfoInput: {
 							...this.state.userPersonalInfoInput,
-							photo: e.target.value,
+							photo: URL.createObjectURL(e.target.files[0]),
 						},
 					},
 					() => console.log(this.state.personalInfo)

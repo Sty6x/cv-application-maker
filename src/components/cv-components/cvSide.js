@@ -14,7 +14,7 @@ class CVside extends React.Component{
         const {persInfo,skills,achievements} = this.props;
         return(
             <div id="cv-side" className=" bg-[#3B4252] h-[1000px] min-w-[30%] gap-8 flex  flex-col py-7 px-3 ">
-                <CVPhoto userPhoto = {persInfo.image}/>
+                <CVPhoto userPhoto = {persInfo.photo}/>
                 <PersonalInfo persInfo={persInfo}/>
                 <SkillList skills={skills}/>
                 <AchievementList achievements={achievements}/>
